@@ -24,4 +24,6 @@ def pytest_configure(config) -> None:
         return
 
     context = re.sub(r"[^a-z0-9_.-]", "-", _effective_username().lower())
-    config.option.basetemp = str(Path("work") / f"pytest-temp-{context}")
+    temp_root = Path("work")
+    temp_root.mkdir(parents=True, exist_ok=True)
+    config.option.basetemp = str(temp_root / f"pytest-temp-{context}")
