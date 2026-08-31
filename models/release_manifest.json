@@ -1,0 +1,36 @@
+{
+  "release_id": "return-risk-635c518b5861",
+  "frozen_at_utc": "2026-08-29T06:17:33.336511+00:00",
+  "model_filename": "return_risk_final.cbm",
+  "model_sha256": "635c518b58610ca3cfcf83e77402563d39b51338bdbffb59662eb9ae2bca3daa",
+  "model_type": "CatBoostClassifier",
+  "tree_count": 55,
+  "training_partition": "chronological_train_only_with_validation_early_stopping",
+  "model_features": [
+    "Product_Price",
+    "Order_Quantity",
+    "Discount_Applied",
+    "Order_Value",
+    "order_year",
+    "order_month",
+    "order_day_of_week",
+    "Product_Category",
+    "Shipping_Method",
+    "Payment_Method"
+  ],
+  "categorical_features": [
+    "Product_Category",
+    "Shipping_Method",
+    "Payment_Method"
+  ],
+  "excluded_proxy_feature": "User_Location",
+  "decision_threshold": 0.426,
+  "threshold_source": "validation_base_cost_optimum",
+  "probability_output": "raw_catboost_probability",
+  "allowed_action": "soft_verification_or_human_review",
+  "prohibited_actions": [
+    "automatic_order_rejection",
+    "automatic_return_rights_restriction"
+  ],
+  "final_test_status_at_freeze": "unaccessed"
+}

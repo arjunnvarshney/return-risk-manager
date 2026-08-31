@@ -1,0 +1,1098 @@
+{
+  "evaluation_partition": "held_out_chronological_test",
+  "test_set_accessed": true,
+  "evaluation_number": 1,
+  "evaluated_at_utc": "2026-08-29T06:19:24.225625+00:00",
+  "release": {
+    "release_id": "return-risk-635c518b5861",
+    "frozen_at_utc": "2026-08-29T06:17:33.336511+00:00",
+    "model_filename": "return_risk_final.cbm",
+    "model_sha256": "635c518b58610ca3cfcf83e77402563d39b51338bdbffb59662eb9ae2bca3daa",
+    "model_type": "CatBoostClassifier",
+    "tree_count": 55,
+    "training_partition": "chronological_train_only_with_validation_early_stopping",
+    "model_features": [
+      "Product_Price",
+      "Order_Quantity",
+      "Discount_Applied",
+      "Order_Value",
+      "order_year",
+      "order_month",
+      "order_day_of_week",
+      "Product_Category",
+      "Shipping_Method",
+      "Payment_Method"
+    ],
+    "categorical_features": [
+      "Product_Category",
+      "Shipping_Method",
+      "Payment_Method"
+    ],
+    "excluded_proxy_feature": "User_Location",
+    "decision_threshold": 0.426,
+    "threshold_source": "validation_base_cost_optimum",
+    "probability_output": "raw_catboost_probability",
+    "allowed_action": "soft_verification_or_human_review",
+    "prohibited_actions": [
+      "automatic_order_rejection",
+      "automatic_return_rights_restriction"
+    ],
+    "final_test_status_at_freeze": "unaccessed"
+  },
+  "test_data": {
+    "orders": 1021,
+    "date_min": "2024-12-15",
+    "date_max": "2025-09-03",
+    "prevalence": 0.287953
+  },
+  "probability_metrics": {
+    "prevalence": 0.287953,
+    "roc_auc": 0.5998,
+    "average_precision": 0.356294,
+    "brier_score": 0.201264,
+    "log_loss": 0.590992,
+    "capacity": {
+      "top_10_percent": {
+        "orders_flagged": 102,
+        "precision": 0.382353,
+        "recall": 0.132653,
+        "lift_over_prevalence": 1.327831
+      },
+      "top_20_percent": {
+        "orders_flagged": 204,
+        "precision": 0.377451,
+        "recall": 0.261905,
+        "lift_over_prevalence": 1.310808
+      },
+      "top_30_percent": {
+        "orders_flagged": 306,
+        "precision": 0.352941,
+        "recall": 0.367347,
+        "lift_over_prevalence": 1.22569
+      }
+    }
+  },
+  "fixed_threshold_metrics": {
+    "threshold": 0.426,
+    "precision": 0.309091,
+    "recall": 0.057823,
+    "f1": 0.097421,
+    "confusion_matrix": {
+      "true_negative": 689,
+      "false_positive": 38,
+      "false_negative": 277,
+      "true_positive": 17
+    }
+  },
+  "fixed_threshold_policy": {
+    "cost_assumptions": {
+      "verification_cost": 25.0,
+      "false_positive_friction_cost": 50.0,
+      "missed_return_cost": 200.0,
+      "intervention_effectiveness": 0.5
+    },
+    "point_estimate": {
+      "orders": 1021,
+      "orders_flagged": 55,
+      "flagged_rate": 0.053869,
+      "true_positive": 17,
+      "false_positive": 38,
+      "false_negative": 277,
+      "true_negative": 689,
+      "total_cost": 60375.0,
+      "cost_per_1000_orders": 59133.2,
+      "savings_vs_no_intervention": -1575.0,
+      "savings_per_1000_orders": -1542.61
+    },
+    "bootstrap_intervals": {
+      "method": "fixed_threshold_nonparametric_order_bootstrap",
+      "replicates": 2000,
+      "confidence": 0.95,
+      "threshold_reselected_per_replicate": false,
+      "precision": {
+        "lower": 0.192279,
+        "median": 0.305556,
+        "upper": 0.437527
+      },
+      "recall": {
+        "lower": 0.033551,
+        "median": 0.056898,
+        "upper": 0.08667
+      },
+      "f1": {
+        "lower": 0.057637,
+        "median": 0.096317,
+        "upper": 0.14249
+      },
+      "flagged_rate": {
+        "lower": 0.040157,
+        "median": 0.053869,
+        "upper": 0.06856
+      },
+      "savings_per_1000_orders": {
+        "lower": -2644.46621,
+        "median": -1542.605289,
+        "upper": -514.201763
+      }
+    }
+  },
+  "ranking_bootstrap_intervals": {
+    "method": "nonparametric_order_bootstrap",
+    "requested_replicates": 2000,
+    "successful_replicates": 2000,
+    "confidence": 0.95,
+    "roc_auc": {
+      "lower": 0.562776,
+      "median": 0.600119,
+      "upper": 0.635223
+    },
+    "average_precision": {
+      "lower": 0.313991,
+      "median": 0.359266,
+      "upper": 0.408755
+    },
+    "top_10_percent_precision": {
+      "lower": 0.294118,
+      "median": 0.392157,
+      "upper": 0.490196
+    }
+  },
+  "category_concentration": {
+    "threshold": 0.426,
+    "orders_flagged": 55,
+    "flagged_rate": 0.053869,
+    "precision": 0.309091,
+    "recall": 0.057823,
+    "true_positive": 17,
+    "false_positive": 38,
+    "categories_represented": 1,
+    "largest_flagged_group": "Clothing",
+    "largest_group_share": 1.0,
+    "group_distribution": {
+      "Clothing": {
+        "orders_flagged": 55,
+        "share_of_flags": 1.0
+      }
+    }
+  },
+  "slice_audit": {
+    "Product_Category": {
+      "minimum_group_size": 20,
+      "eligible_groups": [
+        {
+          "group": "Books",
+          "orders": 156,
+          "prevalence": 0.224359,
+          "mean_score": 0.280099,
+          "flagged_rate": 0.0,
+          "precision": null,
+          "recall": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "confusion_matrix": {
+            "true_negative": 121,
+            "false_positive": 0,
+            "false_negative": 35,
+            "true_positive": 0
+          },
+          "roc_auc": 0.577568,
+          "average_precision": 0.274729
+        },
+        {
+          "group": "Clothing",
+          "orders": 356,
+          "prevalence": 0.379213,
+          "mean_score": 0.388676,
+          "flagged_rate": 0.154494,
+          "precision": 0.309091,
+          "recall": 0.125926,
+          "false_positive_rate": 0.171946,
+          "false_negative_rate": 0.874074,
+          "confusion_matrix": {
+            "true_negative": 183,
+            "false_positive": 38,
+            "false_negative": 118,
+            "true_positive": 17
+          },
+          "roc_auc": 0.481934,
+          "average_precision": 0.382619
+        },
+        {
+          "group": "Electronics",
+          "orders": 270,
+          "prevalence": 0.237037,
+          "mean_score": 0.280524,
+          "flagged_rate": 0.0,
+          "precision": null,
+          "recall": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "confusion_matrix": {
+            "true_negative": 206,
+            "false_positive": 0,
+            "false_negative": 64,
+            "true_positive": 0
+          },
+          "roc_auc": 0.575167,
+          "average_precision": 0.318594
+        },
+        {
+          "group": "Home Appliances",
+          "orders": 90,
+          "prevalence": 0.222222,
+          "mean_score": 0.275887,
+          "flagged_rate": 0.0,
+          "precision": null,
+          "recall": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "confusion_matrix": {
+            "true_negative": 70,
+            "false_positive": 0,
+            "false_negative": 20,
+            "true_positive": 0
+          },
+          "roc_auc": 0.606429,
+          "average_precision": 0.340668
+        },
+        {
+          "group": "Toys",
+          "orders": 149,
+          "prevalence": 0.268456,
+          "mean_score": 0.281585,
+          "flagged_rate": 0.0,
+          "precision": null,
+          "recall": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "confusion_matrix": {
+            "true_negative": 109,
+            "false_positive": 0,
+            "false_negative": 40,
+            "true_positive": 0
+          },
+          "roc_auc": 0.548165,
+          "average_precision": 0.304215
+        }
+      ],
+      "suppressed_groups": [],
+      "suppressed_orders": 0,
+      "observed_disparities": {
+        "flagged_rate": {
+          "minimum_group": "Books",
+          "minimum": 0.0,
+          "maximum_group": "Clothing",
+          "maximum": 0.154494,
+          "absolute_gap": 0.154494
+        },
+        "recall": {
+          "minimum_group": "Books",
+          "minimum": 0.0,
+          "maximum_group": "Clothing",
+          "maximum": 0.125926,
+          "absolute_gap": 0.125926
+        },
+        "false_positive_rate": {
+          "minimum_group": "Books",
+          "minimum": 0.0,
+          "maximum_group": "Clothing",
+          "maximum": 0.171946,
+          "absolute_gap": 0.171946
+        }
+      }
+    },
+    "Payment_Method": {
+      "minimum_group_size": 20,
+      "eligible_groups": [
+        {
+          "group": "COD",
+          "orders": 255,
+          "prevalence": 0.262745,
+          "mean_score": 0.320232,
+          "flagged_rate": 0.039216,
+          "precision": 0.4,
+          "recall": 0.059701,
+          "false_positive_rate": 0.031915,
+          "false_negative_rate": 0.940299,
+          "confusion_matrix": {
+            "true_negative": 182,
+            "false_positive": 6,
+            "false_negative": 63,
+            "true_positive": 4
+          },
+          "roc_auc": 0.616108,
+          "average_precision": 0.372106
+        },
+        {
+          "group": "Credit Card",
+          "orders": 245,
+          "prevalence": 0.334694,
+          "mean_score": 0.320357,
+          "flagged_rate": 0.073469,
+          "precision": 0.277778,
+          "recall": 0.060976,
+          "false_positive_rate": 0.079755,
+          "false_negative_rate": 0.939024,
+          "confusion_matrix": {
+            "true_negative": 150,
+            "false_positive": 13,
+            "false_negative": 77,
+            "true_positive": 5
+          },
+          "roc_auc": 0.564567,
+          "average_precision": 0.40471
+        },
+        {
+          "group": "Debit Card",
+          "orders": 287,
+          "prevalence": 0.303136,
+          "mean_score": 0.317345,
+          "flagged_rate": 0.052265,
+          "precision": 0.333333,
+          "recall": 0.057471,
+          "false_positive_rate": 0.05,
+          "false_negative_rate": 0.942529,
+          "confusion_matrix": {
+            "true_negative": 190,
+            "false_positive": 10,
+            "false_negative": 82,
+            "true_positive": 5
+          },
+          "roc_auc": 0.594483,
+          "average_precision": 0.356127
+        },
+        {
+          "group": "Wallet",
+          "orders": 234,
+          "prevalence": 0.247863,
+          "mean_score": 0.313534,
+          "flagged_rate": 0.051282,
+          "precision": 0.25,
+          "recall": 0.051724,
+          "false_positive_rate": 0.051136,
+          "false_negative_rate": 0.948276,
+          "confusion_matrix": {
+            "true_negative": 167,
+            "false_positive": 9,
+            "false_negative": 55,
+            "true_positive": 3
+          },
+          "roc_auc": 0.634502,
+          "average_precision": 0.349222
+        }
+      ],
+      "suppressed_groups": [],
+      "suppressed_orders": 0,
+      "observed_disparities": {
+        "flagged_rate": {
+          "minimum_group": "COD",
+          "minimum": 0.039216,
+          "maximum_group": "Credit Card",
+          "maximum": 0.073469,
+          "absolute_gap": 0.034253
+        },
+        "recall": {
+          "minimum_group": "Wallet",
+          "minimum": 0.051724,
+          "maximum_group": "Credit Card",
+          "maximum": 0.060976,
+          "absolute_gap": 0.009252
+        },
+        "false_positive_rate": {
+          "minimum_group": "COD",
+          "minimum": 0.031915,
+          "maximum_group": "Credit Card",
+          "maximum": 0.079755,
+          "absolute_gap": 0.04784
+        }
+      }
+    },
+    "Shipping_Method": {
+      "minimum_group_size": 20,
+      "eligible_groups": [
+        {
+          "group": "Express",
+          "orders": 334,
+          "prevalence": 0.302395,
+          "mean_score": 0.318358,
+          "flagged_rate": 0.05988,
+          "precision": 0.3,
+          "recall": 0.059406,
+          "false_positive_rate": 0.060086,
+          "false_negative_rate": 0.940594,
+          "confusion_matrix": {
+            "true_negative": 219,
+            "false_positive": 14,
+            "false_negative": 95,
+            "true_positive": 6
+          },
+          "roc_auc": 0.576935,
+          "average_precision": 0.345624
+        },
+        {
+          "group": "Next-Day",
+          "orders": 341,
+          "prevalence": 0.284457,
+          "mean_score": 0.316584,
+          "flagged_rate": 0.041056,
+          "precision": 0.357143,
+          "recall": 0.051546,
+          "false_positive_rate": 0.036885,
+          "false_negative_rate": 0.948454,
+          "confusion_matrix": {
+            "true_negative": 235,
+            "false_positive": 9,
+            "false_negative": 92,
+            "true_positive": 5
+          },
+          "roc_auc": 0.611459,
+          "average_precision": 0.377215
+        },
+        {
+          "group": "Standard",
+          "orders": 346,
+          "prevalence": 0.277457,
+          "mean_score": 0.3188,
+          "flagged_rate": 0.060694,
+          "precision": 0.285714,
+          "recall": 0.0625,
+          "false_positive_rate": 0.06,
+          "false_negative_rate": 0.9375,
+          "confusion_matrix": {
+            "true_negative": 235,
+            "false_positive": 15,
+            "false_negative": 90,
+            "true_positive": 6
+          },
+          "roc_auc": 0.612188,
+          "average_precision": 0.358401
+        }
+      ],
+      "suppressed_groups": [],
+      "suppressed_orders": 0,
+      "observed_disparities": {
+        "flagged_rate": {
+          "minimum_group": "Next-Day",
+          "minimum": 0.041056,
+          "maximum_group": "Standard",
+          "maximum": 0.060694,
+          "absolute_gap": 0.019638
+        },
+        "recall": {
+          "minimum_group": "Next-Day",
+          "minimum": 0.051546,
+          "maximum_group": "Standard",
+          "maximum": 0.0625,
+          "absolute_gap": 0.010954
+        },
+        "false_positive_rate": {
+          "minimum_group": "Next-Day",
+          "minimum": 0.036885,
+          "maximum_group": "Express",
+          "maximum": 0.060086,
+          "absolute_gap": 0.023201
+        }
+      }
+    },
+    "User_Location": {
+      "minimum_group_size": 20,
+      "eligible_groups": [],
+      "suppressed_groups": [
+        {
+          "group": "City1",
+          "orders": 16
+        },
+        {
+          "group": "City10",
+          "orders": 11
+        },
+        {
+          "group": "City100",
+          "orders": 11
+        },
+        {
+          "group": "City11",
+          "orders": 12
+        },
+        {
+          "group": "City12",
+          "orders": 10
+        },
+        {
+          "group": "City13",
+          "orders": 13
+        },
+        {
+          "group": "City14",
+          "orders": 14
+        },
+        {
+          "group": "City15",
+          "orders": 6
+        },
+        {
+          "group": "City16",
+          "orders": 9
+        },
+        {
+          "group": "City17",
+          "orders": 4
+        },
+        {
+          "group": "City18",
+          "orders": 12
+        },
+        {
+          "group": "City19",
+          "orders": 8
+        },
+        {
+          "group": "City2",
+          "orders": 12
+        },
+        {
+          "group": "City20",
+          "orders": 15
+        },
+        {
+          "group": "City21",
+          "orders": 10
+        },
+        {
+          "group": "City22",
+          "orders": 8
+        },
+        {
+          "group": "City23",
+          "orders": 11
+        },
+        {
+          "group": "City24",
+          "orders": 7
+        },
+        {
+          "group": "City25",
+          "orders": 14
+        },
+        {
+          "group": "City26",
+          "orders": 13
+        },
+        {
+          "group": "City27",
+          "orders": 10
+        },
+        {
+          "group": "City28",
+          "orders": 12
+        },
+        {
+          "group": "City29",
+          "orders": 7
+        },
+        {
+          "group": "City3",
+          "orders": 12
+        },
+        {
+          "group": "City30",
+          "orders": 14
+        },
+        {
+          "group": "City31",
+          "orders": 10
+        },
+        {
+          "group": "City32",
+          "orders": 8
+        },
+        {
+          "group": "City33",
+          "orders": 13
+        },
+        {
+          "group": "City34",
+          "orders": 13
+        },
+        {
+          "group": "City35",
+          "orders": 13
+        },
+        {
+          "group": "City36",
+          "orders": 7
+        },
+        {
+          "group": "City37",
+          "orders": 14
+        },
+        {
+          "group": "City38",
+          "orders": 13
+        },
+        {
+          "group": "City39",
+          "orders": 8
+        },
+        {
+          "group": "City4",
+          "orders": 8
+        },
+        {
+          "group": "City40",
+          "orders": 5
+        },
+        {
+          "group": "City41",
+          "orders": 10
+        },
+        {
+          "group": "City42",
+          "orders": 5
+        },
+        {
+          "group": "City43",
+          "orders": 6
+        },
+        {
+          "group": "City44",
+          "orders": 5
+        },
+        {
+          "group": "City45",
+          "orders": 12
+        },
+        {
+          "group": "City46",
+          "orders": 15
+        },
+        {
+          "group": "City47",
+          "orders": 14
+        },
+        {
+          "group": "City48",
+          "orders": 15
+        },
+        {
+          "group": "City49",
+          "orders": 5
+        },
+        {
+          "group": "City5",
+          "orders": 9
+        },
+        {
+          "group": "City50",
+          "orders": 6
+        },
+        {
+          "group": "City51",
+          "orders": 10
+        },
+        {
+          "group": "City52",
+          "orders": 6
+        },
+        {
+          "group": "City53",
+          "orders": 8
+        },
+        {
+          "group": "City54",
+          "orders": 10
+        },
+        {
+          "group": "City55",
+          "orders": 8
+        },
+        {
+          "group": "City56",
+          "orders": 4
+        },
+        {
+          "group": "City57",
+          "orders": 16
+        },
+        {
+          "group": "City58",
+          "orders": 14
+        },
+        {
+          "group": "City59",
+          "orders": 7
+        },
+        {
+          "group": "City6",
+          "orders": 5
+        },
+        {
+          "group": "City60",
+          "orders": 11
+        },
+        {
+          "group": "City61",
+          "orders": 9
+        },
+        {
+          "group": "City62",
+          "orders": 13
+        },
+        {
+          "group": "City63",
+          "orders": 12
+        },
+        {
+          "group": "City64",
+          "orders": 11
+        },
+        {
+          "group": "City65",
+          "orders": 8
+        },
+        {
+          "group": "City66",
+          "orders": 9
+        },
+        {
+          "group": "City67",
+          "orders": 12
+        },
+        {
+          "group": "City68",
+          "orders": 19
+        },
+        {
+          "group": "City69",
+          "orders": 8
+        },
+        {
+          "group": "City7",
+          "orders": 14
+        },
+        {
+          "group": "City70",
+          "orders": 12
+        },
+        {
+          "group": "City71",
+          "orders": 3
+        },
+        {
+          "group": "City72",
+          "orders": 11
+        },
+        {
+          "group": "City73",
+          "orders": 10
+        },
+        {
+          "group": "City74",
+          "orders": 9
+        },
+        {
+          "group": "City75",
+          "orders": 9
+        },
+        {
+          "group": "City76",
+          "orders": 9
+        },
+        {
+          "group": "City77",
+          "orders": 13
+        },
+        {
+          "group": "City78",
+          "orders": 12
+        },
+        {
+          "group": "City79",
+          "orders": 8
+        },
+        {
+          "group": "City8",
+          "orders": 10
+        },
+        {
+          "group": "City80",
+          "orders": 14
+        },
+        {
+          "group": "City81",
+          "orders": 12
+        },
+        {
+          "group": "City82",
+          "orders": 9
+        },
+        {
+          "group": "City83",
+          "orders": 5
+        },
+        {
+          "group": "City84",
+          "orders": 17
+        },
+        {
+          "group": "City85",
+          "orders": 7
+        },
+        {
+          "group": "City86",
+          "orders": 10
+        },
+        {
+          "group": "City87",
+          "orders": 10
+        },
+        {
+          "group": "City88",
+          "orders": 11
+        },
+        {
+          "group": "City89",
+          "orders": 11
+        },
+        {
+          "group": "City9",
+          "orders": 10
+        },
+        {
+          "group": "City90",
+          "orders": 13
+        },
+        {
+          "group": "City91",
+          "orders": 11
+        },
+        {
+          "group": "City92",
+          "orders": 11
+        },
+        {
+          "group": "City93",
+          "orders": 15
+        },
+        {
+          "group": "City94",
+          "orders": 9
+        },
+        {
+          "group": "City95",
+          "orders": 10
+        },
+        {
+          "group": "City96",
+          "orders": 4
+        },
+        {
+          "group": "City97",
+          "orders": 13
+        },
+        {
+          "group": "City98",
+          "orders": 7
+        },
+        {
+          "group": "City99",
+          "orders": 7
+        }
+      ],
+      "suppressed_orders": 1021,
+      "observed_disparities": {
+        "flagged_rate": null,
+        "recall": null,
+        "false_positive_rate": null
+      }
+    },
+    "User_Gender": {
+      "minimum_group_size": 20,
+      "eligible_groups": [
+        {
+          "group": "Female",
+          "orders": 494,
+          "prevalence": 0.295547,
+          "mean_score": 0.318802,
+          "flagged_rate": 0.052632,
+          "precision": 0.346154,
+          "recall": 0.061644,
+          "false_positive_rate": 0.048851,
+          "false_negative_rate": 0.938356,
+          "confusion_matrix": {
+            "true_negative": 331,
+            "false_positive": 17,
+            "false_negative": 137,
+            "true_positive": 9
+          },
+          "roc_auc": 0.609924,
+          "average_precision": 0.385968
+        },
+        {
+          "group": "Male",
+          "orders": 527,
+          "prevalence": 0.280835,
+          "mean_score": 0.317084,
+          "flagged_rate": 0.055028,
+          "precision": 0.275862,
+          "recall": 0.054054,
+          "false_positive_rate": 0.055409,
+          "false_negative_rate": 0.945946,
+          "confusion_matrix": {
+            "true_negative": 358,
+            "false_positive": 21,
+            "false_negative": 140,
+            "true_positive": 8
+          },
+          "roc_auc": 0.58946,
+          "average_precision": 0.333462
+        }
+      ],
+      "suppressed_groups": [],
+      "suppressed_orders": 0,
+      "observed_disparities": {
+        "flagged_rate": {
+          "minimum_group": "Female",
+          "minimum": 0.052632,
+          "maximum_group": "Male",
+          "maximum": 0.055028,
+          "absolute_gap": 0.002396
+        },
+        "recall": {
+          "minimum_group": "Male",
+          "minimum": 0.054054,
+          "maximum_group": "Female",
+          "maximum": 0.061644,
+          "absolute_gap": 0.00759
+        },
+        "false_positive_rate": {
+          "minimum_group": "Female",
+          "minimum": 0.048851,
+          "maximum_group": "Male",
+          "maximum": 0.055409,
+          "absolute_gap": 0.006558
+        }
+      }
+    },
+    "Age_Band": {
+      "minimum_group_size": 20,
+      "eligible_groups": [
+        {
+          "group": "18-29",
+          "orders": 249,
+          "prevalence": 0.26506,
+          "mean_score": 0.318143,
+          "flagged_rate": 0.048193,
+          "precision": 0.166667,
+          "recall": 0.030303,
+          "false_positive_rate": 0.054645,
+          "false_negative_rate": 0.969697,
+          "confusion_matrix": {
+            "true_negative": 173,
+            "false_positive": 10,
+            "false_negative": 64,
+            "true_positive": 2
+          },
+          "roc_auc": 0.583126,
+          "average_precision": 0.314193
+        },
+        {
+          "group": "30-44",
+          "orders": 324,
+          "prevalence": 0.305556,
+          "mean_score": 0.313882,
+          "flagged_rate": 0.049383,
+          "precision": 0.375,
+          "recall": 0.060606,
+          "false_positive_rate": 0.044444,
+          "false_negative_rate": 0.939394,
+          "confusion_matrix": {
+            "true_negative": 215,
+            "false_positive": 10,
+            "false_negative": 93,
+            "true_positive": 6
+          },
+          "roc_auc": 0.602155,
+          "average_precision": 0.397331
+        },
+        {
+          "group": "45-60",
+          "orders": 344,
+          "prevalence": 0.293605,
+          "mean_score": 0.320828,
+          "flagged_rate": 0.063953,
+          "precision": 0.363636,
+          "recall": 0.079208,
+          "false_positive_rate": 0.057613,
+          "false_negative_rate": 0.920792,
+          "confusion_matrix": {
+            "true_negative": 229,
+            "false_positive": 14,
+            "false_negative": 93,
+            "true_positive": 8
+          },
+          "roc_auc": 0.603227,
+          "average_precision": 0.375366
+        },
+        {
+          "group": "61+",
+          "orders": 104,
+          "prevalence": 0.269231,
+          "mean_score": 0.320303,
+          "flagged_rate": 0.048077,
+          "precision": 0.2,
+          "recall": 0.035714,
+          "false_positive_rate": 0.052632,
+          "false_negative_rate": 0.964286,
+          "confusion_matrix": {
+            "true_negative": 72,
+            "false_positive": 4,
+            "false_negative": 27,
+            "true_positive": 1
+          },
+          "roc_auc": 0.62359,
+          "average_precision": 0.355252
+        }
+      ],
+      "suppressed_groups": [],
+      "suppressed_orders": 0,
+      "observed_disparities": {
+        "flagged_rate": {
+          "minimum_group": "61+",
+          "minimum": 0.048077,
+          "maximum_group": "45-60",
+          "maximum": 0.063953,
+          "absolute_gap": 0.015876
+        },
+        "recall": {
+          "minimum_group": "18-29",
+          "minimum": 0.030303,
+          "maximum_group": "45-60",
+          "maximum": 0.079208,
+          "absolute_gap": 0.048905
+        },
+        "false_positive_rate": {
+          "minimum_group": "30-44",
+          "minimum": 0.044444,
+          "maximum_group": "45-60",
+          "maximum": 0.057613,
+          "absolute_gap": 0.013169
+        }
+      }
+    }
+  },
+  "interpretation": {
+    "allowed_use": "Soft verification or human review only.",
+    "not_allowed": [
+      "Automatic order rejection",
+      "Automatic restriction of return rights"
+    ],
+    "metric_status": "Final held-out metrics; no further model selection is allowed."
+  },
+  "limitations": [
+    "The source dataset is synthetic.",
+    "Cost assumptions and intervention effectiveness are hypothetical.",
+    "Bootstrap intervals describe sampling uncertainty, not production drift.",
+    "Slice comparisons are descriptive and do not establish causal fairness."
+  ]
+}

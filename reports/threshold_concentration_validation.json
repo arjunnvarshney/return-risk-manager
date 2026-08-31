@@ -1,0 +1,300 @@
+{
+  "evaluation_partition": "validation_only",
+  "test_set_accessed": false,
+  "model": "catboost_ablation_without_location",
+  "features": [
+    "Product_Price",
+    "Order_Quantity",
+    "Discount_Applied",
+    "Order_Value",
+    "order_year",
+    "order_month",
+    "order_day_of_week",
+    "Product_Category",
+    "Shipping_Method",
+    "Payment_Method"
+  ],
+  "cost_assumptions": {
+    "verification_cost": 25.0,
+    "false_positive_friction_cost": 50.0,
+    "missed_return_cost": 200.0,
+    "intervention_effectiveness": 0.5
+  },
+  "thresholds_evaluated": 1003,
+  "milestones": {
+    "cost_optimal": {
+      "threshold": 0.426,
+      "orders_flagged": 56,
+      "flagged_rate": 0.055556,
+      "precision": 0.589286,
+      "recall": 0.106452,
+      "true_positive": 33,
+      "false_positive": 23,
+      "categories_represented": 1,
+      "largest_flagged_group": "Clothing",
+      "largest_group_share": 1.0,
+      "group_distribution": {
+        "Clothing": {
+          "orders_flagged": 56,
+          "share_of_flags": 1.0
+        }
+      },
+      "cost": {
+        "orders": 1008,
+        "orders_flagged": 56,
+        "flagged_rate": 0.055556,
+        "true_positive": 33,
+        "false_positive": 23,
+        "false_negative": 277,
+        "true_negative": 675,
+        "total_cost": 61250.0,
+        "cost_per_1000_orders": 60763.89,
+        "savings_vs_no_intervention": 750.0,
+        "savings_per_1000_orders": 744.05
+      }
+    },
+    "approximately_top_10_percent": {
+      "threshold": 0.40909145439155276,
+      "orders_flagged": 101,
+      "flagged_rate": 0.100198,
+      "precision": 0.50495,
+      "recall": 0.164516,
+      "true_positive": 51,
+      "false_positive": 50,
+      "categories_represented": 1,
+      "largest_flagged_group": "Clothing",
+      "largest_group_share": 1.0,
+      "group_distribution": {
+        "Clothing": {
+          "orders_flagged": 101,
+          "share_of_flags": 1.0
+        }
+      },
+      "cost": {
+        "orders": 1008,
+        "orders_flagged": 101,
+        "flagged_rate": 0.100198,
+        "true_positive": 51,
+        "false_positive": 50,
+        "false_negative": 259,
+        "true_negative": 648,
+        "total_cost": 61925.0,
+        "cost_per_1000_orders": 61433.53,
+        "savings_vs_no_intervention": 75.0,
+        "savings_per_1000_orders": 74.4
+      }
+    },
+    "approximately_top_20_percent": {
+      "threshold": 0.38547193181637673,
+      "orders_flagged": 202,
+      "flagged_rate": 0.200397,
+      "precision": 0.410891,
+      "recall": 0.267742,
+      "true_positive": 83,
+      "false_positive": 119,
+      "categories_represented": 1,
+      "largest_flagged_group": "Clothing",
+      "largest_group_share": 1.0,
+      "group_distribution": {
+        "Clothing": {
+          "orders_flagged": 202,
+          "share_of_flags": 1.0
+        }
+      },
+      "cost": {
+        "orders": 1008,
+        "orders_flagged": 202,
+        "flagged_rate": 0.200397,
+        "true_positive": 83,
+        "false_positive": 119,
+        "false_negative": 227,
+        "true_negative": 579,
+        "total_cost": 64700.0,
+        "cost_per_1000_orders": 64186.51,
+        "savings_vs_no_intervention": -2700.0,
+        "savings_per_1000_orders": -2678.57
+      }
+    },
+    "approximately_top_30_percent": {
+      "threshold": 0.36038212450862406,
+      "orders_flagged": 302,
+      "flagged_rate": 0.299603,
+      "precision": 0.397351,
+      "recall": 0.387097,
+      "true_positive": 120,
+      "false_positive": 182,
+      "categories_represented": 3,
+      "largest_flagged_group": "Clothing",
+      "largest_group_share": 0.990066,
+      "group_distribution": {
+        "Clothing": {
+          "orders_flagged": 299,
+          "share_of_flags": 0.990066
+        },
+        "Toys": {
+          "orders_flagged": 2,
+          "share_of_flags": 0.006623
+        },
+        "Electronics": {
+          "orders_flagged": 1,
+          "share_of_flags": 0.003311
+        }
+      },
+      "cost": {
+        "orders": 1008,
+        "orders_flagged": 302,
+        "flagged_rate": 0.299603,
+        "true_positive": 120,
+        "false_positive": 182,
+        "false_negative": 190,
+        "true_negative": 516,
+        "total_cost": 66650.0,
+        "cost_per_1000_orders": 66121.03,
+        "savings_vs_no_intervention": -4650.0,
+        "savings_per_1000_orders": -4613.1
+      }
+    },
+    "first_threshold_with_2_categories": {
+      "threshold": 0.368586105785085,
+      "orders_flagged": 279,
+      "flagged_rate": 0.276786,
+      "precision": 0.408602,
+      "recall": 0.367742,
+      "true_positive": 114,
+      "false_positive": 165,
+      "categories_represented": 2,
+      "largest_flagged_group": "Clothing",
+      "largest_group_share": 0.996416,
+      "group_distribution": {
+        "Clothing": {
+          "orders_flagged": 278,
+          "share_of_flags": 0.996416
+        },
+        "Electronics": {
+          "orders_flagged": 1,
+          "share_of_flags": 0.003584
+        }
+      },
+      "cost": {
+        "orders": 1008,
+        "orders_flagged": 279,
+        "flagged_rate": 0.276786,
+        "true_positive": 114,
+        "false_positive": 165,
+        "false_negative": 196,
+        "true_negative": 533,
+        "total_cost": 65825.0,
+        "cost_per_1000_orders": 65302.58,
+        "savings_vs_no_intervention": -3825.0,
+        "savings_per_1000_orders": -3794.64
+      }
+    },
+    "first_threshold_with_3_categories": {
+      "threshold": 0.36657341114388015,
+      "orders_flagged": 286,
+      "flagged_rate": 0.28373,
+      "precision": 0.402098,
+      "recall": 0.370968,
+      "true_positive": 115,
+      "false_positive": 171,
+      "categories_represented": 3,
+      "largest_flagged_group": "Clothing",
+      "largest_group_share": 0.993007,
+      "group_distribution": {
+        "Clothing": {
+          "orders_flagged": 284,
+          "share_of_flags": 0.993007
+        },
+        "Toys": {
+          "orders_flagged": 1,
+          "share_of_flags": 0.003497
+        },
+        "Electronics": {
+          "orders_flagged": 1,
+          "share_of_flags": 0.003497
+        }
+      },
+      "cost": {
+        "orders": 1008,
+        "orders_flagged": 286,
+        "flagged_rate": 0.28373,
+        "true_positive": 115,
+        "false_positive": 171,
+        "false_negative": 195,
+        "true_negative": 527,
+        "total_cost": 66200.0,
+        "cost_per_1000_orders": 65674.6,
+        "savings_vs_no_intervention": -4200.0,
+        "savings_per_1000_orders": -4166.67
+      }
+    },
+    "first_threshold_with_all_categories": {
+      "threshold": 0.3546253316585874,
+      "orders_flagged": 329,
+      "flagged_rate": 0.326389,
+      "precision": 0.401216,
+      "recall": 0.425806,
+      "true_positive": 132,
+      "false_positive": 197,
+      "categories_represented": 5,
+      "largest_flagged_group": "Clothing",
+      "largest_group_share": 0.981763,
+      "group_distribution": {
+        "Clothing": {
+          "orders_flagged": 323,
+          "share_of_flags": 0.981763
+        },
+        "Books": {
+          "orders_flagged": 2,
+          "share_of_flags": 0.006079
+        },
+        "Toys": {
+          "orders_flagged": 2,
+          "share_of_flags": 0.006079
+        },
+        "Home Appliances": {
+          "orders_flagged": 1,
+          "share_of_flags": 0.00304
+        },
+        "Electronics": {
+          "orders_flagged": 1,
+          "share_of_flags": 0.00304
+        }
+      },
+      "cost": {
+        "orders": 1008,
+        "orders_flagged": 329,
+        "flagged_rate": 0.326389,
+        "true_positive": 132,
+        "false_positive": 197,
+        "false_negative": 178,
+        "true_negative": 501,
+        "total_cost": 66875.0,
+        "cost_per_1000_orders": 66344.25,
+        "savings_vs_no_intervention": -4875.0,
+        "savings_per_1000_orders": -4836.31
+      }
+    }
+  },
+  "illustrative_balanced_guardrails": {
+    "maximum_flagged_rate": 0.3,
+    "maximum_largest_category_share": 0.75,
+    "minimum_precision": 0.30754,
+    "requires_positive_estimated_savings": true,
+    "candidate": null,
+    "status": "no_candidate_found"
+  },
+  "recommended_action_design": {
+    "high_risk": "Soft verification or human review only; never automatic rejection.",
+    "lower_risk": "Return the score for monitoring without customer friction.",
+    "category_quotas": "Not recommended; quotas would deliberately flag lower-risk orders.",
+    "threshold_status": "Validation demo setting only; merchant costs and review capacity are required before production use."
+  },
+  "limitations": [
+    "Thresholds were explored on validation data and are not final test claims.",
+    "The 75% category-share and 30% capacity limits are illustrative, not merchant input.",
+    "Cost assumptions and intervention effectiveness are hypothetical.",
+    "Category concentration may reflect synthetic target construction.",
+    "The source dataset is synthetic."
+  ]
+}

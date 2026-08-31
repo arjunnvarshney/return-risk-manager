@@ -1,0 +1,41 @@
+{
+  "evaluation_partition": "validation_only",
+  "test_set_accessed_for_selection": false,
+  "selection_metric": "validation_average_precision_with_safety_guardrails",
+  "selected_model": "Frozen CatBoost (no location)",
+  "models": [
+    {
+      "model": "Logistic regression",
+      "status": "Baseline",
+      "roc_auc": 0.58022,
+      "average_precision": 0.392159,
+      "brier_score": 0.211673,
+      "top_10_percent_precision": 0.455446
+    },
+    {
+      "model": "Frozen CatBoost (no location)",
+      "status": "Champion",
+      "roc_auc": 0.605994,
+      "average_precision": 0.412504,
+      "brier_score": 0.206994,
+      "top_10_percent_precision": 0.50495
+    },
+    {
+      "model": "Optuna-tuned CatBoost",
+      "status": "Rejected: weaker AP",
+      "roc_auc": 0.603688,
+      "average_precision": 0.404464,
+      "brier_score": 0.206683,
+      "top_10_percent_precision": 0.455446
+    },
+    {
+      "model": "Calibrated CatBoost",
+      "status": "Rejected: worse calibration",
+      "roc_auc": 0.605994,
+      "average_precision": 0.412504,
+      "brier_score": 0.207478,
+      "top_10_percent_precision": 0.50495
+    }
+  ],
+  "decision": "The no-location raw CatBoost was frozen because it retained the strongest validation average precision without using the unauditable location proxy."
+}

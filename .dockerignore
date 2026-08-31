@@ -1,0 +1,34 @@
+.git/
+.github/
+.venv/
+.ruff_cache/
+.pytest_cache/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Never send source datasets, processed splits, experiments, or local scratch data.
+data/
+notebooks/
+scripts/
+tests/
+work/
+outputs/
+runtime/
+api/
+app/
+
+# Only the immutable release assets needed at runtime enter the build context.
+models/*
+!models/return_risk_final.cbm
+!models/release_manifest.json
+!models/operational_policy.json
+!models/drift_reference.json
+!models/policy_frontier.json
+!models/model_selection_summary.json
+reports/*
+!reports/final_test_evaluation.json
+
+.env
+.env.*
+compose*.override.yaml

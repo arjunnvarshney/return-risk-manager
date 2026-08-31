@@ -1,0 +1,315 @@
+{
+  "evaluation_partition": "validation_only",
+  "test_set_accessed": false,
+  "calibration_method": "sigmoid_platt_scaling",
+  "model": "promoted_catboost_without_location",
+  "frozen_tree_count": 55,
+  "calibration_training": {
+    "source": "chronological_out_of_fold_training_predictions",
+    "orders": 1771,
+    "positive_rate": 0.298701,
+    "folds": [
+      {
+        "fold": 1,
+        "training_orders": 1200,
+        "calibration_orders": 583,
+        "training_date_max": "2022-11-16",
+        "calibration_date_min": "2022-11-17",
+        "calibration_date_max": "2023-04-28"
+      },
+      {
+        "fold": 2,
+        "training_orders": 1783,
+        "calibration_orders": 587,
+        "training_date_max": "2023-04-28",
+        "calibration_date_min": "2023-04-29",
+        "calibration_date_max": "2023-10-06"
+      },
+      {
+        "fold": 3,
+        "training_orders": 2370,
+        "calibration_orders": 601,
+        "training_date_max": "2023-10-06",
+        "calibration_date_min": "2023-10-07",
+        "calibration_date_max": "2024-03-14"
+      }
+    ],
+    "sigmoid_coefficient": 0.81555,
+    "sigmoid_intercept": -0.23427
+  },
+  "raw_validation": {
+    "probability_metrics": {
+      "prevalence": 0.30754,
+      "roc_auc": 0.605994,
+      "average_precision": 0.412504,
+      "brier_score": 0.206994,
+      "log_loss": 0.60345,
+      "capacity": {
+        "top_10_percent": {
+          "orders_flagged": 101,
+          "precision": 0.50495,
+          "recall": 0.164516,
+          "lift_over_prevalence": 1.641904
+        },
+        "top_20_percent": {
+          "orders_flagged": 202,
+          "precision": 0.410891,
+          "recall": 0.267742,
+          "lift_over_prevalence": 1.336059
+        },
+        "top_30_percent": {
+          "orders_flagged": 302,
+          "precision": 0.397351,
+          "recall": 0.387097,
+          "lift_over_prevalence": 1.292032
+        }
+      }
+    },
+    "reliability": {
+      "binning": "equal_frequency",
+      "bin_count": 10,
+      "expected_calibration_error": 0.041921,
+      "maximum_calibration_error": 0.086742,
+      "bins": [
+        {
+          "bin": 1,
+          "orders": 101,
+          "mean_probability": 0.239057,
+          "observed_return_rate": 0.178218,
+          "absolute_error": 0.060839
+        },
+        {
+          "bin": 2,
+          "orders": 101,
+          "mean_probability": 0.258444,
+          "observed_return_rate": 0.247525,
+          "absolute_error": 0.010919
+        },
+        {
+          "bin": 3,
+          "orders": 101,
+          "mean_probability": 0.27052,
+          "observed_return_rate": 0.257426,
+          "absolute_error": 0.013094
+        },
+        {
+          "bin": 4,
+          "orders": 101,
+          "mean_probability": 0.285098,
+          "observed_return_rate": 0.247525,
+          "absolute_error": 0.037574
+        },
+        {
+          "bin": 5,
+          "orders": 101,
+          "mean_probability": 0.305834,
+          "observed_return_rate": 0.237624,
+          "absolute_error": 0.06821
+        },
+        {
+          "bin": 6,
+          "orders": 101,
+          "mean_probability": 0.324498,
+          "observed_return_rate": 0.376238,
+          "absolute_error": 0.051739
+        },
+        {
+          "bin": 7,
+          "orders": 101,
+          "mean_probability": 0.347617,
+          "observed_return_rate": 0.336634,
+          "absolute_error": 0.010983
+        },
+        {
+          "bin": 8,
+          "orders": 101,
+          "mean_probability": 0.374103,
+          "observed_return_rate": 0.386139,
+          "absolute_error": 0.012035
+        },
+        {
+          "bin": 9,
+          "orders": 100,
+          "mean_probability": 0.396742,
+          "observed_return_rate": 0.31,
+          "absolute_error": 0.086742
+        },
+        {
+          "bin": 10,
+          "orders": 100,
+          "mean_probability": 0.432223,
+          "observed_return_rate": 0.5,
+          "absolute_error": 0.067777
+        }
+      ]
+    },
+    "cost_policy": {
+      "assumptions": {
+        "verification_cost": 25.0,
+        "false_positive_friction_cost": 50.0,
+        "missed_return_cost": 200.0,
+        "intervention_effectiveness": 0.5
+      },
+      "selected_threshold": 0.426,
+      "selected_total_cost": 61250.0,
+      "selected_cost_per_1000_orders": 60763.89,
+      "no_intervention_total_cost": 62000.0,
+      "verify_all_total_cost": 91100.0,
+      "savings_vs_no_intervention": 750.0,
+      "selected_policy": {
+        "orders": 1008,
+        "orders_flagged": 56,
+        "flagged_rate": 0.055556,
+        "true_positive": 33,
+        "false_positive": 23,
+        "false_negative": 277,
+        "true_negative": 675,
+        "total_cost": 61250.0,
+        "cost_per_1000_orders": 60763.89,
+        "savings_vs_no_intervention": 750.0,
+        "savings_per_1000_orders": 744.05
+      }
+    }
+  },
+  "calibrated_validation": {
+    "probability_metrics": {
+      "prevalence": 0.30754,
+      "roc_auc": 0.605994,
+      "average_precision": 0.412504,
+      "brier_score": 0.207478,
+      "log_loss": 0.604339,
+      "capacity": {
+        "top_10_percent": {
+          "orders_flagged": 101,
+          "precision": 0.50495,
+          "recall": 0.164516,
+          "lift_over_prevalence": 1.641904
+        },
+        "top_20_percent": {
+          "orders_flagged": 202,
+          "precision": 0.410891,
+          "recall": 0.267742,
+          "lift_over_prevalence": 1.336059
+        },
+        "top_30_percent": {
+          "orders_flagged": 302,
+          "precision": 0.397351,
+          "recall": 0.387097,
+          "lift_over_prevalence": 1.292032
+        }
+      }
+    },
+    "reliability": {
+      "binning": "equal_frequency",
+      "bin_count": 10,
+      "expected_calibration_error": 0.043268,
+      "maximum_calibration_error": 0.112217,
+      "bins": [
+        {
+          "bin": 1,
+          "orders": 101,
+          "mean_probability": 0.235287,
+          "observed_return_rate": 0.178218,
+          "absolute_error": 0.057069
+        },
+        {
+          "bin": 2,
+          "orders": 101,
+          "mean_probability": 0.250879,
+          "observed_return_rate": 0.247525,
+          "absolute_error": 0.003354
+        },
+        {
+          "bin": 3,
+          "orders": 101,
+          "mean_probability": 0.260515,
+          "observed_return_rate": 0.257426,
+          "absolute_error": 0.00309
+        },
+        {
+          "bin": 4,
+          "orders": 101,
+          "mean_probability": 0.272093,
+          "observed_return_rate": 0.247525,
+          "absolute_error": 0.024568
+        },
+        {
+          "bin": 5,
+          "orders": 101,
+          "mean_probability": 0.288483,
+          "observed_return_rate": 0.237624,
+          "absolute_error": 0.050859
+        },
+        {
+          "bin": 6,
+          "orders": 101,
+          "mean_probability": 0.303176,
+          "observed_return_rate": 0.376238,
+          "absolute_error": 0.073062
+        },
+        {
+          "bin": 7,
+          "orders": 101,
+          "mean_probability": 0.321324,
+          "observed_return_rate": 0.336634,
+          "absolute_error": 0.015309
+        },
+        {
+          "bin": 8,
+          "orders": 101,
+          "mean_probability": 0.34209,
+          "observed_return_rate": 0.386139,
+          "absolute_error": 0.044048
+        },
+        {
+          "bin": 9,
+          "orders": 100,
+          "mean_probability": 0.359847,
+          "observed_return_rate": 0.31,
+          "absolute_error": 0.049847
+        },
+        {
+          "bin": 10,
+          "orders": 100,
+          "mean_probability": 0.387783,
+          "observed_return_rate": 0.5,
+          "absolute_error": 0.112217
+        }
+      ]
+    },
+    "cost_policy": {
+      "assumptions": {
+        "verification_cost": 25.0,
+        "false_positive_friction_cost": 50.0,
+        "missed_return_cost": 200.0,
+        "intervention_effectiveness": 0.5
+      },
+      "selected_threshold": 0.384,
+      "selected_total_cost": 61250.0,
+      "selected_cost_per_1000_orders": 60763.89,
+      "no_intervention_total_cost": 62000.0,
+      "verify_all_total_cost": 91100.0,
+      "savings_vs_no_intervention": 750.0,
+      "selected_policy": {
+        "orders": 1008,
+        "orders_flagged": 56,
+        "flagged_rate": 0.055556,
+        "true_positive": 33,
+        "false_positive": 23,
+        "false_negative": 277,
+        "true_negative": 675,
+        "total_cost": 61250.0,
+        "cost_per_1000_orders": 60763.89,
+        "savings_vs_no_intervention": 750.0,
+        "savings_per_1000_orders": 744.05
+      }
+    }
+  },
+  "calibrated_minus_raw": {
+    "brier_score": 0.000484,
+    "log_loss": 0.000889,
+    "expected_calibration_error": 0.001347
+  },
+  "calibration_preferred": false,
+  "decision_rule": "Keep calibration only if both validation Brier score and log loss improve."
+}

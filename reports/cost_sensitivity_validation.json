@@ -1,0 +1,299 @@
+{
+  "evaluation_partition": "validation_only",
+  "test_set_accessed": false,
+  "model": "promoted_catboost_without_location_raw_probabilities",
+  "probability_metrics": {
+    "prevalence": 0.30754,
+    "roc_auc": 0.605994,
+    "average_precision": 0.412504,
+    "brier_score": 0.206994,
+    "log_loss": 0.60345,
+    "capacity": {
+      "top_10_percent": {
+        "orders_flagged": 101,
+        "precision": 0.50495,
+        "recall": 0.164516,
+        "lift_over_prevalence": 1.641904
+      },
+      "top_20_percent": {
+        "orders_flagged": 202,
+        "precision": 0.410891,
+        "recall": 0.267742,
+        "lift_over_prevalence": 1.336059
+      },
+      "top_30_percent": {
+        "orders_flagged": 302,
+        "precision": 0.397351,
+        "recall": 0.387097,
+        "lift_over_prevalence": 1.292032
+      }
+    }
+  },
+  "ranking_bootstrap_intervals": {
+    "method": "nonparametric_order_bootstrap",
+    "requested_replicates": 2000,
+    "successful_replicates": 2000,
+    "confidence": 0.95,
+    "roc_auc": {
+      "lower": 0.569194,
+      "median": 0.607046,
+      "upper": 0.643649
+    },
+    "average_precision": {
+      "lower": 0.364304,
+      "median": 0.416376,
+      "upper": 0.467308
+    },
+    "top_10_percent_precision": {
+      "lower": 0.39604,
+      "median": 0.49505,
+      "upper": 0.594059
+    }
+  },
+  "cost_assumptions_status": "Hypothetical sensitivity scenarios; replace with merchant-observed costs before production use.",
+  "scenarios": {
+    "low_false_positive_cost": {
+      "assumptions": {
+        "verification_cost": 15.0,
+        "false_positive_friction_cost": 20.0,
+        "missed_return_cost": 200.0,
+        "intervention_effectiveness": 0.5
+      },
+      "selected_threshold": 0.31,
+      "policy": {
+        "assumptions": {
+          "verification_cost": 15.0,
+          "false_positive_friction_cost": 20.0,
+          "missed_return_cost": 200.0,
+          "intervention_effectiveness": 0.5
+        },
+        "selected_threshold": 0.31,
+        "selected_total_cost": 56310.0,
+        "selected_cost_per_1000_orders": 55863.1,
+        "no_intervention_total_cost": 62000.0,
+        "verify_all_total_cost": 60080.0,
+        "savings_vs_no_intervention": 5690.0,
+        "selected_policy": {
+          "orders": 1008,
+          "orders_flagged": 530,
+          "flagged_rate": 0.525794,
+          "true_positive": 202,
+          "false_positive": 328,
+          "false_negative": 108,
+          "true_negative": 370,
+          "total_cost": 56310.0,
+          "cost_per_1000_orders": 55863.1,
+          "savings_vs_no_intervention": 5690.0,
+          "savings_per_1000_orders": 5644.84
+        }
+      },
+      "threshold_metrics": {
+        "threshold": 0.31,
+        "precision": 0.381132,
+        "recall": 0.651613,
+        "f1": 0.480952,
+        "confusion_matrix": {
+          "true_negative": 370,
+          "false_positive": 328,
+          "false_negative": 108,
+          "true_positive": 202
+        }
+      },
+      "bootstrap_intervals": {
+        "method": "fixed_threshold_nonparametric_order_bootstrap",
+        "replicates": 2000,
+        "confidence": 0.95,
+        "threshold_reselected_per_replicate": false,
+        "precision": {
+          "lower": 0.340384,
+          "median": 0.382129,
+          "upper": 0.423081
+        },
+        "recall": {
+          "lower": 0.601215,
+          "median": 0.652449,
+          "upper": 0.704864
+        },
+        "f1": {
+          "lower": 0.439391,
+          "median": 0.48227,
+          "upper": 0.520231
+        },
+        "flagged_rate": {
+          "lower": 0.497024,
+          "median": 0.526786,
+          "upper": 0.556548
+        },
+        "savings_per_1000_orders": {
+          "lower": 3050.099206,
+          "median": 5719.246032,
+          "upper": 8278.769841
+        }
+      }
+    },
+    "base_case": {
+      "assumptions": {
+        "verification_cost": 25.0,
+        "false_positive_friction_cost": 50.0,
+        "missed_return_cost": 200.0,
+        "intervention_effectiveness": 0.5
+      },
+      "selected_threshold": 0.426,
+      "policy": {
+        "assumptions": {
+          "verification_cost": 25.0,
+          "false_positive_friction_cost": 50.0,
+          "missed_return_cost": 200.0,
+          "intervention_effectiveness": 0.5
+        },
+        "selected_threshold": 0.426,
+        "selected_total_cost": 61250.0,
+        "selected_cost_per_1000_orders": 60763.89,
+        "no_intervention_total_cost": 62000.0,
+        "verify_all_total_cost": 91100.0,
+        "savings_vs_no_intervention": 750.0,
+        "selected_policy": {
+          "orders": 1008,
+          "orders_flagged": 56,
+          "flagged_rate": 0.055556,
+          "true_positive": 33,
+          "false_positive": 23,
+          "false_negative": 277,
+          "true_negative": 675,
+          "total_cost": 61250.0,
+          "cost_per_1000_orders": 60763.89,
+          "savings_vs_no_intervention": 750.0,
+          "savings_per_1000_orders": 744.05
+        }
+      },
+      "threshold_metrics": {
+        "threshold": 0.426,
+        "precision": 0.589286,
+        "recall": 0.106452,
+        "f1": 0.180328,
+        "confusion_matrix": {
+          "true_negative": 675,
+          "false_positive": 23,
+          "false_negative": 277,
+          "true_positive": 33
+        }
+      },
+      "bootstrap_intervals": {
+        "method": "fixed_threshold_nonparametric_order_bootstrap",
+        "replicates": 2000,
+        "confidence": 0.95,
+        "threshold_reselected_per_replicate": false,
+        "precision": {
+          "lower": 0.459016,
+          "median": 0.589286,
+          "upper": 0.717405
+        },
+        "recall": {
+          "lower": 0.074194,
+          "median": 0.105919,
+          "upper": 0.140575
+        },
+        "f1": {
+          "lower": 0.128483,
+          "median": 0.17971,
+          "upper": 0.230769
+        },
+        "flagged_rate": {
+          "lower": 0.041667,
+          "median": 0.055556,
+          "upper": 0.069444
+        },
+        "savings_per_1000_orders": {
+          "lower": -297.619048,
+          "median": 744.047619,
+          "upper": 1785.714286
+        }
+      }
+    },
+    "high_false_positive_cost": {
+      "assumptions": {
+        "verification_cost": 40.0,
+        "false_positive_friction_cost": 100.0,
+        "missed_return_cost": 200.0,
+        "intervention_effectiveness": 0.5
+      },
+      "selected_threshold": 0.476,
+      "policy": {
+        "assumptions": {
+          "verification_cost": 40.0,
+          "false_positive_friction_cost": 100.0,
+          "missed_return_cost": 200.0,
+          "intervention_effectiveness": 0.5
+        },
+        "selected_threshold": 0.476,
+        "selected_total_cost": 61940.0,
+        "selected_cost_per_1000_orders": 61448.41,
+        "no_intervention_total_cost": 62000.0,
+        "verify_all_total_cost": 141120.0,
+        "savings_vs_no_intervention": 60.0,
+        "selected_policy": {
+          "orders": 1008,
+          "orders_flagged": 1,
+          "flagged_rate": 0.000992,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 309,
+          "true_negative": 698,
+          "total_cost": 61940.0,
+          "cost_per_1000_orders": 61448.41,
+          "savings_vs_no_intervention": 60.0,
+          "savings_per_1000_orders": 59.52
+        }
+      },
+      "threshold_metrics": {
+        "threshold": 0.476,
+        "precision": 1.0,
+        "recall": 0.003226,
+        "f1": 0.006431,
+        "confusion_matrix": {
+          "true_negative": 698,
+          "false_positive": 0,
+          "false_negative": 309,
+          "true_positive": 1
+        }
+      },
+      "bootstrap_intervals": {
+        "method": "fixed_threshold_nonparametric_order_bootstrap",
+        "replicates": 2000,
+        "confidence": 0.95,
+        "threshold_reselected_per_replicate": false,
+        "precision": {
+          "lower": 0.0,
+          "median": 1.0,
+          "upper": 1.0
+        },
+        "recall": {
+          "lower": 0.0,
+          "median": 0.003165,
+          "upper": 0.010206
+        },
+        "f1": {
+          "lower": 0.0,
+          "median": 0.006309,
+          "upper": 0.020205
+        },
+        "flagged_rate": {
+          "lower": 0.0,
+          "median": 0.000992,
+          "upper": 0.002976
+        },
+        "savings_per_1000_orders": {
+          "lower": 0.0,
+          "median": 59.52381,
+          "upper": 178.571429
+        }
+      }
+    }
+  },
+  "limitations": [
+    "Thresholds were selected on validation data and are not final test claims.",
+    "Bootstrap intervals condition on the selected fixed threshold.",
+    "Intervention effectiveness is assumed rather than observed.",
+    "The source dataset is synthetic."
+  ]
+}

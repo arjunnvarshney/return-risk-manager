@@ -1,0 +1,11 @@
+{
+  "release_id": "return-risk-635c518b5861",
+  "deployment_mode": "shadow",
+  "actual_action": "monitor_only",
+  "activated_after_final_evaluation": true,
+  "reason": "Held-out estimated savings were negative across the full 95% bootstrap interval.",
+  "would_flag_field_is_counterfactual": true,
+  "customer_friction_allowed": false,
+  "automatic_rejection_allowed": false,
+  "return_rights_restriction_allowed": false
+}

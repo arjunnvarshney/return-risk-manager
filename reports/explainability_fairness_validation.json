@@ -1,0 +1,1181 @@
+{
+  "evaluation_partition": "validation_only",
+  "test_set_accessed": false,
+  "model": "promoted_catboost_without_location_raw_probabilities",
+  "decision_threshold": 0.426,
+  "model_features": [
+    "Product_Price",
+    "Order_Quantity",
+    "Discount_Applied",
+    "Order_Value",
+    "order_year",
+    "order_month",
+    "order_day_of_week",
+    "Product_Category",
+    "Shipping_Method",
+    "Payment_Method"
+  ],
+  "sensitive_attributes_in_model": false,
+  "sensitive_audit_note": "Age band and gender are used only after scoring to inspect outcomes. They are not model inputs. Location was removed from the promoted model and is retained only for proxy auditing.",
+  "shap": {
+    "method": "CatBoost native TreeSHAP",
+    "space": "raw model log-odds",
+    "maximum_reconstruction_error": 0.0,
+    "global_importance": [
+      {
+        "feature": "Product_Category",
+        "mean_absolute_shap": 0.210024
+      },
+      {
+        "feature": "Discount_Applied",
+        "mean_absolute_shap": 0.116776
+      },
+      {
+        "feature": "order_year",
+        "mean_absolute_shap": 0.114505
+      },
+      {
+        "feature": "order_day_of_week",
+        "mean_absolute_shap": 0.035897
+      },
+      {
+        "feature": "order_month",
+        "mean_absolute_shap": 0.031829
+      },
+      {
+        "feature": "Order_Quantity",
+        "mean_absolute_shap": 0.023606
+      },
+      {
+        "feature": "Order_Value",
+        "mean_absolute_shap": 0.014253
+      },
+      {
+        "feature": "Payment_Method",
+        "mean_absolute_shap": 0.010986
+      },
+      {
+        "feature": "Product_Price",
+        "mean_absolute_shap": 0.009663
+      },
+      {
+        "feature": "Shipping_Method",
+        "mean_absolute_shap": 0.003327
+      }
+    ],
+    "local_examples": {
+      "highest_risk": {
+        "validation_row_position": 702,
+        "probability": 0.479176,
+        "expected_raw_value": -0.890829,
+        "raw_prediction": -0.083344,
+        "reconstruction_error": 0.0,
+        "top_reasons": [
+          {
+            "feature": "Product_Category",
+            "value": "Clothing",
+            "shap_log_odds": 0.340398,
+            "direction": "raised",
+            "reason": "Product_Category = Clothing raised the model's return-risk score"
+          },
+          {
+            "feature": "Discount_Applied",
+            "value": "36.96",
+            "shap_log_odds": 0.219439,
+            "direction": "raised",
+            "reason": "Discount_Applied = 36.96 raised the model's return-risk score"
+          },
+          {
+            "feature": "order_year",
+            "value": "2024",
+            "shap_log_odds": 0.106176,
+            "direction": "raised",
+            "reason": "order_year = 2024 raised the model's return-risk score"
+          },
+          {
+            "feature": "Order_Value",
+            "value": "272.45",
+            "shap_log_odds": 0.045099,
+            "direction": "raised",
+            "reason": "Order_Value = 272.45 raised the model's return-risk score"
+          },
+          {
+            "feature": "order_month",
+            "value": "9",
+            "shap_log_odds": 0.040177,
+            "direction": "raised",
+            "reason": "order_month = 9 raised the model's return-risk score"
+          },
+          {
+            "feature": "Order_Quantity",
+            "value": "2",
+            "shap_log_odds": 0.030664,
+            "direction": "raised",
+            "reason": "Order_Quantity = 2 raised the model's return-risk score"
+          },
+          {
+            "feature": "Product_Price",
+            "value": "216.09",
+            "shap_log_odds": 0.019717,
+            "direction": "raised",
+            "reason": "Product_Price = 216.09 raised the model's return-risk score"
+          },
+          {
+            "feature": "order_day_of_week",
+            "value": "4",
+            "shap_log_odds": 0.005369,
+            "direction": "raised",
+            "reason": "order_day_of_week = 4 raised the model's return-risk score"
+          }
+        ],
+        "interpretation_note": "Positive SHAP values raise model log-odds and negative values lower them; these describe model behavior, not causal effects."
+      },
+      "median_risk": {
+        "validation_row_position": 475,
+        "probability": 0.31506,
+        "expected_raw_value": -0.890829,
+        "raw_prediction": -0.776567,
+        "reconstruction_error": 0.0,
+        "top_reasons": [
+          {
+            "feature": "Discount_Applied",
+            "value": "34.87",
+            "shap_log_odds": 0.183621,
+            "direction": "raised",
+            "reason": "Discount_Applied = 34.87 raised the model's return-risk score"
+          },
+          {
+            "feature": "Product_Category",
+            "value": "Toys",
+            "shap_log_odds": -0.158152,
+            "direction": "lowered",
+            "reason": "Product_Category = Toys lowered the model's return-risk score"
+          },
+          {
+            "feature": "order_year",
+            "value": "2024",
+            "shap_log_odds": 0.065323,
+            "direction": "raised",
+            "reason": "order_year = 2024 raised the model's return-risk score"
+          },
+          {
+            "feature": "order_month",
+            "value": "7",
+            "shap_log_odds": 0.033553,
+            "direction": "raised",
+            "reason": "order_month = 7 raised the model's return-risk score"
+          },
+          {
+            "feature": "order_day_of_week",
+            "value": "0",
+            "shap_log_odds": -0.025853,
+            "direction": "lowered",
+            "reason": "order_day_of_week = 0 lowered the model's return-risk score"
+          },
+          {
+            "feature": "Payment_Method",
+            "value": "Debit Card",
+            "shap_log_odds": 0.01285,
+            "direction": "raised",
+            "reason": "Payment_Method = Debit Card raised the model's return-risk score"
+          },
+          {
+            "feature": "Order_Value",
+            "value": "1087.31",
+            "shap_log_odds": -0.003708,
+            "direction": "lowered",
+            "reason": "Order_Value = 1087.31 lowered the model's return-risk score"
+          },
+          {
+            "feature": "Order_Quantity",
+            "value": "1",
+            "shap_log_odds": 0.00351,
+            "direction": "raised",
+            "reason": "Order_Quantity = 1 raised the model's return-risk score"
+          }
+        ],
+        "interpretation_note": "Positive SHAP values raise model log-odds and negative values lower them; these describe model behavior, not causal effects."
+      },
+      "lowest_risk": {
+        "validation_row_position": 948,
+        "probability": 0.203468,
+        "expected_raw_value": -0.890829,
+        "raw_prediction": -1.364756,
+        "reconstruction_error": 0.0,
+        "top_reasons": [
+          {
+            "feature": "Product_Category",
+            "value": "Home Appliances",
+            "shap_log_odds": -0.20553,
+            "direction": "lowered",
+            "reason": "Product_Category = Home Appliances lowered the model's return-risk score"
+          },
+          {
+            "feature": "Discount_Applied",
+            "value": "7.78",
+            "shap_log_odds": -0.157775,
+            "direction": "lowered",
+            "reason": "Discount_Applied = 7.78 lowered the model's return-risk score"
+          },
+          {
+            "feature": "Order_Quantity",
+            "value": "5",
+            "shap_log_odds": -0.095549,
+            "direction": "lowered",
+            "reason": "Order_Quantity = 5 lowered the model's return-risk score"
+          },
+          {
+            "feature": "order_day_of_week",
+            "value": "0",
+            "shap_log_odds": -0.057306,
+            "direction": "lowered",
+            "reason": "order_day_of_week = 0 lowered the model's return-risk score"
+          },
+          {
+            "feature": "order_month",
+            "value": "12",
+            "shap_log_odds": 0.057165,
+            "direction": "raised",
+            "reason": "order_month = 12 raised the model's return-risk score"
+          },
+          {
+            "feature": "Product_Price",
+            "value": "101.08",
+            "shap_log_odds": -0.056395,
+            "direction": "lowered",
+            "reason": "Product_Price = 101.08 lowered the model's return-risk score"
+          },
+          {
+            "feature": "order_year",
+            "value": "2024",
+            "shap_log_odds": 0.045923,
+            "direction": "raised",
+            "reason": "order_year = 2024 raised the model's return-risk score"
+          },
+          {
+            "feature": "Payment_Method",
+            "value": "Debit Card",
+            "shap_log_odds": -0.005294,
+            "direction": "lowered",
+            "reason": "Payment_Method = Debit Card lowered the model's return-risk score"
+          }
+        ],
+        "interpretation_note": "Positive SHAP values raise model log-odds and negative values lower them; these describe model behavior, not causal effects."
+      }
+    }
+  },
+  "slice_audit": {
+    "Product_Category": {
+      "minimum_group_size": 20,
+      "eligible_groups": [
+        {
+          "group": "Books",
+          "orders": 148,
+          "prevalence": 0.236486,
+          "mean_score": 0.279877,
+          "flagged_rate": 0.0,
+          "precision": null,
+          "recall": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "confusion_matrix": {
+            "true_negative": 113,
+            "false_positive": 0,
+            "false_negative": 35,
+            "true_positive": 0
+          },
+          "roc_auc": 0.524399,
+          "average_precision": 0.28031
+        },
+        {
+          "group": "Clothing",
+          "orders": 375,
+          "prevalence": 0.392,
+          "mean_score": 0.389727,
+          "flagged_rate": 0.149333,
+          "precision": 0.589286,
+          "recall": 0.22449,
+          "false_positive_rate": 0.100877,
+          "false_negative_rate": 0.77551,
+          "confusion_matrix": {
+            "true_negative": 205,
+            "false_positive": 23,
+            "false_negative": 114,
+            "true_positive": 33
+          },
+          "roc_auc": 0.568848,
+          "average_precision": 0.479029
+        },
+        {
+          "group": "Electronics",
+          "orders": 234,
+          "prevalence": 0.282051,
+          "mean_score": 0.289123,
+          "flagged_rate": 0.0,
+          "precision": null,
+          "recall": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "confusion_matrix": {
+            "true_negative": 168,
+            "false_positive": 0,
+            "false_negative": 66,
+            "true_positive": 0
+          },
+          "roc_auc": 0.578914,
+          "average_precision": 0.331349
+        },
+        {
+          "group": "Home Appliances",
+          "orders": 96,
+          "prevalence": 0.270833,
+          "mean_score": 0.280455,
+          "flagged_rate": 0.0,
+          "precision": null,
+          "recall": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "confusion_matrix": {
+            "true_negative": 70,
+            "false_positive": 0,
+            "false_negative": 26,
+            "true_positive": 0
+          },
+          "roc_auc": 0.610989,
+          "average_precision": 0.424693
+        },
+        {
+          "group": "Toys",
+          "orders": 155,
+          "prevalence": 0.232258,
+          "mean_score": 0.281748,
+          "flagged_rate": 0.0,
+          "precision": null,
+          "recall": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "confusion_matrix": {
+            "true_negative": 119,
+            "false_positive": 0,
+            "false_negative": 36,
+            "true_positive": 0
+          },
+          "roc_auc": 0.506769,
+          "average_precision": 0.259725
+        }
+      ],
+      "suppressed_groups": [],
+      "suppressed_orders": 0,
+      "observed_disparities": {
+        "flagged_rate": {
+          "minimum_group": "Books",
+          "minimum": 0.0,
+          "maximum_group": "Clothing",
+          "maximum": 0.149333,
+          "absolute_gap": 0.149333
+        },
+        "recall": {
+          "minimum_group": "Books",
+          "minimum": 0.0,
+          "maximum_group": "Clothing",
+          "maximum": 0.22449,
+          "absolute_gap": 0.22449
+        },
+        "false_positive_rate": {
+          "minimum_group": "Books",
+          "minimum": 0.0,
+          "maximum_group": "Clothing",
+          "maximum": 0.100877,
+          "absolute_gap": 0.100877
+        }
+      }
+    },
+    "Payment_Method": {
+      "minimum_group_size": 20,
+      "eligible_groups": [
+        {
+          "group": "COD",
+          "orders": 247,
+          "prevalence": 0.311741,
+          "mean_score": 0.320072,
+          "flagged_rate": 0.032389,
+          "precision": 0.75,
+          "recall": 0.077922,
+          "false_positive_rate": 0.011765,
+          "false_negative_rate": 0.922078,
+          "confusion_matrix": {
+            "true_negative": 168,
+            "false_positive": 2,
+            "false_negative": 71,
+            "true_positive": 6
+          },
+          "roc_auc": 0.646982,
+          "average_precision": 0.453991
+        },
+        {
+          "group": "Credit Card",
+          "orders": 246,
+          "prevalence": 0.321138,
+          "mean_score": 0.327924,
+          "flagged_rate": 0.077236,
+          "precision": 0.631579,
+          "recall": 0.151899,
+          "false_positive_rate": 0.041916,
+          "false_negative_rate": 0.848101,
+          "confusion_matrix": {
+            "true_negative": 160,
+            "false_positive": 7,
+            "false_negative": 67,
+            "true_positive": 12
+          },
+          "roc_auc": 0.627037,
+          "average_precision": 0.477398
+        },
+        {
+          "group": "Debit Card",
+          "orders": 235,
+          "prevalence": 0.251064,
+          "mean_score": 0.323006,
+          "flagged_rate": 0.055319,
+          "precision": 0.615385,
+          "recall": 0.135593,
+          "false_positive_rate": 0.028409,
+          "false_negative_rate": 0.864407,
+          "confusion_matrix": {
+            "true_negative": 171,
+            "false_positive": 5,
+            "false_negative": 51,
+            "true_positive": 8
+          },
+          "roc_auc": 0.589657,
+          "average_precision": 0.364347
+        },
+        {
+          "group": "Wallet",
+          "orders": 280,
+          "prevalence": 0.339286,
+          "mean_score": 0.322092,
+          "flagged_rate": 0.057143,
+          "precision": 0.4375,
+          "recall": 0.073684,
+          "false_positive_rate": 0.048649,
+          "false_negative_rate": 0.926316,
+          "confusion_matrix": {
+            "true_negative": 176,
+            "false_positive": 9,
+            "false_negative": 88,
+            "true_positive": 7
+          },
+          "roc_auc": 0.574879,
+          "average_precision": 0.395535
+        }
+      ],
+      "suppressed_groups": [],
+      "suppressed_orders": 0,
+      "observed_disparities": {
+        "flagged_rate": {
+          "minimum_group": "COD",
+          "minimum": 0.032389,
+          "maximum_group": "Credit Card",
+          "maximum": 0.077236,
+          "absolute_gap": 0.044847
+        },
+        "recall": {
+          "minimum_group": "Wallet",
+          "minimum": 0.073684,
+          "maximum_group": "Credit Card",
+          "maximum": 0.151899,
+          "absolute_gap": 0.078215
+        },
+        "false_positive_rate": {
+          "minimum_group": "COD",
+          "minimum": 0.011765,
+          "maximum_group": "Wallet",
+          "maximum": 0.048649,
+          "absolute_gap": 0.036884
+        }
+      }
+    },
+    "Shipping_Method": {
+      "minimum_group_size": 20,
+      "eligible_groups": [
+        {
+          "group": "Express",
+          "orders": 346,
+          "prevalence": 0.286127,
+          "mean_score": 0.324525,
+          "flagged_rate": 0.078035,
+          "precision": 0.666667,
+          "recall": 0.181818,
+          "false_positive_rate": 0.036437,
+          "false_negative_rate": 0.818182,
+          "confusion_matrix": {
+            "true_negative": 238,
+            "false_positive": 9,
+            "false_negative": 81,
+            "true_positive": 18
+          },
+          "roc_auc": 0.640698,
+          "average_precision": 0.468579
+        },
+        {
+          "group": "Next-Day",
+          "orders": 343,
+          "prevalence": 0.28863,
+          "mean_score": 0.320722,
+          "flagged_rate": 0.037901,
+          "precision": 0.538462,
+          "recall": 0.070707,
+          "false_positive_rate": 0.02459,
+          "false_negative_rate": 0.929293,
+          "confusion_matrix": {
+            "true_negative": 238,
+            "false_positive": 6,
+            "false_negative": 92,
+            "true_positive": 7
+          },
+          "roc_auc": 0.620653,
+          "average_precision": 0.397493
+        },
+        {
+          "group": "Standard",
+          "orders": 319,
+          "prevalence": 0.351097,
+          "mean_score": 0.324531,
+          "flagged_rate": 0.050157,
+          "precision": 0.5,
+          "recall": 0.071429,
+          "false_positive_rate": 0.038647,
+          "false_negative_rate": 0.928571,
+          "confusion_matrix": {
+            "true_negative": 199,
+            "false_positive": 8,
+            "false_negative": 104,
+            "true_positive": 8
+          },
+          "roc_auc": 0.557626,
+          "average_precision": 0.400179
+        }
+      ],
+      "suppressed_groups": [],
+      "suppressed_orders": 0,
+      "observed_disparities": {
+        "flagged_rate": {
+          "minimum_group": "Next-Day",
+          "minimum": 0.037901,
+          "maximum_group": "Express",
+          "maximum": 0.078035,
+          "absolute_gap": 0.040134
+        },
+        "recall": {
+          "minimum_group": "Next-Day",
+          "minimum": 0.070707,
+          "maximum_group": "Express",
+          "maximum": 0.181818,
+          "absolute_gap": 0.111111
+        },
+        "false_positive_rate": {
+          "minimum_group": "Next-Day",
+          "minimum": 0.02459,
+          "maximum_group": "Standard",
+          "maximum": 0.038647,
+          "absolute_gap": 0.014057
+        }
+      }
+    },
+    "User_Location": {
+      "minimum_group_size": 20,
+      "eligible_groups": [],
+      "suppressed_groups": [
+        {
+          "group": "City1",
+          "orders": 9
+        },
+        {
+          "group": "City10",
+          "orders": 8
+        },
+        {
+          "group": "City100",
+          "orders": 14
+        },
+        {
+          "group": "City11",
+          "orders": 6
+        },
+        {
+          "group": "City12",
+          "orders": 10
+        },
+        {
+          "group": "City13",
+          "orders": 14
+        },
+        {
+          "group": "City14",
+          "orders": 8
+        },
+        {
+          "group": "City15",
+          "orders": 11
+        },
+        {
+          "group": "City16",
+          "orders": 8
+        },
+        {
+          "group": "City17",
+          "orders": 14
+        },
+        {
+          "group": "City18",
+          "orders": 7
+        },
+        {
+          "group": "City19",
+          "orders": 8
+        },
+        {
+          "group": "City2",
+          "orders": 9
+        },
+        {
+          "group": "City20",
+          "orders": 17
+        },
+        {
+          "group": "City21",
+          "orders": 14
+        },
+        {
+          "group": "City22",
+          "orders": 7
+        },
+        {
+          "group": "City23",
+          "orders": 8
+        },
+        {
+          "group": "City24",
+          "orders": 13
+        },
+        {
+          "group": "City25",
+          "orders": 17
+        },
+        {
+          "group": "City26",
+          "orders": 10
+        },
+        {
+          "group": "City27",
+          "orders": 11
+        },
+        {
+          "group": "City28",
+          "orders": 5
+        },
+        {
+          "group": "City29",
+          "orders": 8
+        },
+        {
+          "group": "City3",
+          "orders": 11
+        },
+        {
+          "group": "City30",
+          "orders": 9
+        },
+        {
+          "group": "City31",
+          "orders": 10
+        },
+        {
+          "group": "City32",
+          "orders": 7
+        },
+        {
+          "group": "City33",
+          "orders": 8
+        },
+        {
+          "group": "City34",
+          "orders": 8
+        },
+        {
+          "group": "City35",
+          "orders": 16
+        },
+        {
+          "group": "City36",
+          "orders": 15
+        },
+        {
+          "group": "City37",
+          "orders": 8
+        },
+        {
+          "group": "City38",
+          "orders": 6
+        },
+        {
+          "group": "City39",
+          "orders": 9
+        },
+        {
+          "group": "City4",
+          "orders": 7
+        },
+        {
+          "group": "City40",
+          "orders": 9
+        },
+        {
+          "group": "City41",
+          "orders": 13
+        },
+        {
+          "group": "City42",
+          "orders": 13
+        },
+        {
+          "group": "City43",
+          "orders": 10
+        },
+        {
+          "group": "City44",
+          "orders": 6
+        },
+        {
+          "group": "City45",
+          "orders": 10
+        },
+        {
+          "group": "City46",
+          "orders": 7
+        },
+        {
+          "group": "City47",
+          "orders": 11
+        },
+        {
+          "group": "City48",
+          "orders": 7
+        },
+        {
+          "group": "City49",
+          "orders": 7
+        },
+        {
+          "group": "City5",
+          "orders": 12
+        },
+        {
+          "group": "City50",
+          "orders": 6
+        },
+        {
+          "group": "City51",
+          "orders": 12
+        },
+        {
+          "group": "City52",
+          "orders": 8
+        },
+        {
+          "group": "City53",
+          "orders": 7
+        },
+        {
+          "group": "City54",
+          "orders": 9
+        },
+        {
+          "group": "City55",
+          "orders": 10
+        },
+        {
+          "group": "City56",
+          "orders": 10
+        },
+        {
+          "group": "City57",
+          "orders": 11
+        },
+        {
+          "group": "City58",
+          "orders": 9
+        },
+        {
+          "group": "City59",
+          "orders": 14
+        },
+        {
+          "group": "City6",
+          "orders": 14
+        },
+        {
+          "group": "City60",
+          "orders": 9
+        },
+        {
+          "group": "City61",
+          "orders": 12
+        },
+        {
+          "group": "City62",
+          "orders": 9
+        },
+        {
+          "group": "City63",
+          "orders": 7
+        },
+        {
+          "group": "City64",
+          "orders": 7
+        },
+        {
+          "group": "City65",
+          "orders": 8
+        },
+        {
+          "group": "City66",
+          "orders": 9
+        },
+        {
+          "group": "City67",
+          "orders": 16
+        },
+        {
+          "group": "City68",
+          "orders": 19
+        },
+        {
+          "group": "City69",
+          "orders": 9
+        },
+        {
+          "group": "City7",
+          "orders": 6
+        },
+        {
+          "group": "City70",
+          "orders": 17
+        },
+        {
+          "group": "City71",
+          "orders": 8
+        },
+        {
+          "group": "City72",
+          "orders": 15
+        },
+        {
+          "group": "City73",
+          "orders": 15
+        },
+        {
+          "group": "City74",
+          "orders": 8
+        },
+        {
+          "group": "City75",
+          "orders": 7
+        },
+        {
+          "group": "City76",
+          "orders": 7
+        },
+        {
+          "group": "City77",
+          "orders": 6
+        },
+        {
+          "group": "City78",
+          "orders": 11
+        },
+        {
+          "group": "City79",
+          "orders": 14
+        },
+        {
+          "group": "City8",
+          "orders": 7
+        },
+        {
+          "group": "City80",
+          "orders": 7
+        },
+        {
+          "group": "City81",
+          "orders": 5
+        },
+        {
+          "group": "City82",
+          "orders": 7
+        },
+        {
+          "group": "City83",
+          "orders": 13
+        },
+        {
+          "group": "City84",
+          "orders": 14
+        },
+        {
+          "group": "City85",
+          "orders": 12
+        },
+        {
+          "group": "City86",
+          "orders": 14
+        },
+        {
+          "group": "City87",
+          "orders": 8
+        },
+        {
+          "group": "City88",
+          "orders": 8
+        },
+        {
+          "group": "City89",
+          "orders": 12
+        },
+        {
+          "group": "City9",
+          "orders": 12
+        },
+        {
+          "group": "City90",
+          "orders": 19
+        },
+        {
+          "group": "City91",
+          "orders": 7
+        },
+        {
+          "group": "City92",
+          "orders": 6
+        },
+        {
+          "group": "City93",
+          "orders": 8
+        },
+        {
+          "group": "City94",
+          "orders": 10
+        },
+        {
+          "group": "City95",
+          "orders": 18
+        },
+        {
+          "group": "City96",
+          "orders": 16
+        },
+        {
+          "group": "City97",
+          "orders": 8
+        },
+        {
+          "group": "City98",
+          "orders": 8
+        },
+        {
+          "group": "City99",
+          "orders": 5
+        }
+      ],
+      "suppressed_orders": 1008,
+      "observed_disparities": {
+        "flagged_rate": null,
+        "recall": null,
+        "false_positive_rate": null
+      }
+    },
+    "User_Gender": {
+      "minimum_group_size": 20,
+      "eligible_groups": [
+        {
+          "group": "Female",
+          "orders": 517,
+          "prevalence": 0.31528,
+          "mean_score": 0.321641,
+          "flagged_rate": 0.052224,
+          "precision": 0.481481,
+          "recall": 0.079755,
+          "false_positive_rate": 0.039548,
+          "false_negative_rate": 0.920245,
+          "confusion_matrix": {
+            "true_negative": 340,
+            "false_positive": 14,
+            "false_negative": 150,
+            "true_positive": 13
+          },
+          "roc_auc": 0.579044,
+          "average_precision": 0.379117
+        },
+        {
+          "group": "Male",
+          "orders": 491,
+          "prevalence": 0.299389,
+          "mean_score": 0.324909,
+          "flagged_rate": 0.059063,
+          "precision": 0.689655,
+          "recall": 0.136054,
+          "false_positive_rate": 0.026163,
+          "false_negative_rate": 0.863946,
+          "confusion_matrix": {
+            "true_negative": 335,
+            "false_positive": 9,
+            "false_negative": 127,
+            "true_positive": 20
+          },
+          "roc_auc": 0.636005,
+          "average_precision": 0.457975
+        }
+      ],
+      "suppressed_groups": [],
+      "suppressed_orders": 0,
+      "observed_disparities": {
+        "flagged_rate": {
+          "minimum_group": "Female",
+          "minimum": 0.052224,
+          "maximum_group": "Male",
+          "maximum": 0.059063,
+          "absolute_gap": 0.006839
+        },
+        "recall": {
+          "minimum_group": "Female",
+          "minimum": 0.079755,
+          "maximum_group": "Male",
+          "maximum": 0.136054,
+          "absolute_gap": 0.056299
+        },
+        "false_positive_rate": {
+          "minimum_group": "Male",
+          "minimum": 0.026163,
+          "maximum_group": "Female",
+          "maximum": 0.039548,
+          "absolute_gap": 0.013385
+        }
+      }
+    },
+    "Age_Band": {
+      "minimum_group_size": 20,
+      "eligible_groups": [
+        {
+          "group": "18-29",
+          "orders": 267,
+          "prevalence": 0.277154,
+          "mean_score": 0.329258,
+          "flagged_rate": 0.037453,
+          "precision": 0.5,
+          "recall": 0.067568,
+          "false_positive_rate": 0.025907,
+          "false_negative_rate": 0.932432,
+          "confusion_matrix": {
+            "true_negative": 188,
+            "false_positive": 5,
+            "false_negative": 69,
+            "true_positive": 5
+          },
+          "roc_auc": 0.600756,
+          "average_precision": 0.378414
+        },
+        {
+          "group": "30-44",
+          "orders": 297,
+          "prevalence": 0.340067,
+          "mean_score": 0.324638,
+          "flagged_rate": 0.084175,
+          "precision": 0.68,
+          "recall": 0.168317,
+          "false_positive_rate": 0.040816,
+          "false_negative_rate": 0.831683,
+          "confusion_matrix": {
+            "true_negative": 188,
+            "false_positive": 8,
+            "false_negative": 84,
+            "true_positive": 17
+          },
+          "roc_auc": 0.634674,
+          "average_precision": 0.483293
+        },
+        {
+          "group": "45-60",
+          "orders": 338,
+          "prevalence": 0.295858,
+          "mean_score": 0.320185,
+          "flagged_rate": 0.059172,
+          "precision": 0.55,
+          "recall": 0.11,
+          "false_positive_rate": 0.037815,
+          "false_negative_rate": 0.89,
+          "confusion_matrix": {
+            "true_negative": 229,
+            "false_positive": 9,
+            "false_negative": 89,
+            "true_positive": 11
+          },
+          "roc_auc": 0.623319,
+          "average_precision": 0.412957
+        },
+        {
+          "group": "61+",
+          "orders": 106,
+          "prevalence": 0.330189,
+          "mean_score": 0.313838,
+          "flagged_rate": 0.009434,
+          "precision": 0.0,
+          "recall": 0.0,
+          "false_positive_rate": 0.014085,
+          "false_negative_rate": 1.0,
+          "confusion_matrix": {
+            "true_negative": 70,
+            "false_positive": 1,
+            "false_negative": 35,
+            "true_positive": 0
+          },
+          "roc_auc": 0.504225,
+          "average_precision": 0.329658
+        }
+      ],
+      "suppressed_groups": [],
+      "suppressed_orders": 0,
+      "observed_disparities": {
+        "flagged_rate": {
+          "minimum_group": "61+",
+          "minimum": 0.009434,
+          "maximum_group": "30-44",
+          "maximum": 0.084175,
+          "absolute_gap": 0.074741
+        },
+        "recall": {
+          "minimum_group": "61+",
+          "minimum": 0.0,
+          "maximum_group": "30-44",
+          "maximum": 0.168317,
+          "absolute_gap": 0.168317
+        },
+        "false_positive_rate": {
+          "minimum_group": "61+",
+          "minimum": 0.014085,
+          "maximum_group": "30-44",
+          "maximum": 0.040816,
+          "absolute_gap": 0.026731
+        }
+      }
+    }
+  },
+  "limitations": [
+    "All findings are validation-only; the final test partition remains locked.",
+    "SHAP explains model behavior and does not establish causal effects.",
+    "Observed group gaps are descriptive and do not by themselves prove discrimination.",
+    "Groups below the minimum sample size are suppressed because rates are unstable.",
+    "The threshold was selected on validation data under hypothetical merchant costs.",
+    "The source dataset is synthetic and cannot establish production fairness or utility."
+  ]
+}

@@ -1,0 +1,52 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Local data and generated artifacts
+data/raw/*.csv
+data/processed/*
+!data/processed/.gitkeep
+!data/processed/split_manifest.json
+models/*
+!models/.gitkeep
+!models/return_risk_final.cbm
+!models/release_manifest.json
+!models/drift_reference.json
+!models/operational_policy.json
+!models/policy_frontier.json
+!models/model_selection_summary.json
+reports/figures/*
+!reports/figures/.gitkeep
+!reports/figures/final_test_evaluation.png
+!reports/figures/global_shap_importance.png
+!reports/figures/high_risk_local_shap.png
+!reports/figures/validation_cost_threshold_sensitivity.png
+!reports/figures/validation_feature_ablation.png
+!reports/figures/validation_reliability_curve.png
+!reports/figures/validation_slice_false_positive_rates.png
+!reports/figures/validation_threshold_concentration.png
+reports/*.json
+reports/*.csv
+!reports/catboost_calibration_validation.json
+!reports/cost_sensitivity_validation.json
+!reports/explainability_fairness_validation.json
+!reports/feature_ablation_validation.json
+!reports/final_test_evaluation.json
+!reports/threshold_concentration_validation.json
+!reports/v2_research_validation.json
+
+# Notebook and editor noise
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Codex scratch and local delivery folders
+work/
+outputs/
+runtime/

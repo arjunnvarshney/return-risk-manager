@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "return-risk-manager"
+version = "0.1.0"
+description = "Leakage-safe, cost-sensitive e-commerce return-risk scoring prototype."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "joblib>=1.4,<2",
+  "numpy>=2.0,<3",
+  "pandas>=2.2,<4",
+  "scikit-learn>=1.6,<2",
+]
+
+[project.optional-dependencies]
+modeling = [
+  "catboost>=1.2.8,<2",
+  "matplotlib>=3.9,<4",
+  "optuna>=4.4,<5",
+  "seaborn>=0.13,<1",
+  "shap>=0.48,<1",
+]
+api = [
+  "fastapi>=0.116,<1",
+  "pydantic>=2.11,<3",
+  "uvicorn[standard]>=0.35,<1",
+]
+demo = ["streamlit>=1.48,<2"]
+runtime = [
+  "catboost>=1.2.8,<2",
+  "fastapi>=0.116,<1",
+  "pydantic>=2.11,<3",
+  "python-multipart>=0.0.20,<1",
+  "streamlit>=1.48,<2",
+  "uvicorn[standard]>=0.35,<1",
+]
+dev = [
+  "httpx>=0.28,<1",
+  "pytest>=8.4,<9",
+  "ruff>=0.12,<1",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q -p no:cacheprovider"
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = ["work"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

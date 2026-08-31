@@ -1,0 +1,225 @@
+{
+  "research_status": "post_test_exploratory_not_eligible_for_promotion",
+  "official_release_untouched": true,
+  "held_out_test_accessed_by_script": false,
+  "selection_partition": "original_train_expanding_date_folds_only",
+  "selection_metric": "mean_training_fold_average_precision",
+  "validation_status": "reused_exploratory_check_not_a_new_holdout",
+  "candidates": {
+    "v1_catboost": {
+      "feature_set": "official_v1",
+      "fold_results": [
+        {
+          "fold": 1,
+          "train_rows": 1200,
+          "validation_rows": 583,
+          "train_date_max": "2022-11-16",
+          "validation_date_min": "2022-11-17",
+          "average_precision": 0.376473,
+          "roc_auc": 0.582141,
+          "top_10_percent_precision": 0.431034
+        },
+        {
+          "fold": 2,
+          "train_rows": 1783,
+          "validation_rows": 587,
+          "train_date_max": "2023-04-28",
+          "validation_date_min": "2023-04-29",
+          "average_precision": 0.364019,
+          "roc_auc": 0.580928,
+          "top_10_percent_precision": 0.372881
+        },
+        {
+          "fold": 3,
+          "train_rows": 2370,
+          "validation_rows": 601,
+          "train_date_max": "2023-10-06",
+          "validation_date_min": "2023-10-07",
+          "average_precision": 0.403289,
+          "roc_auc": 0.591108,
+          "top_10_percent_precision": 0.45
+        }
+      ],
+      "mean_average_precision": 0.38126,
+      "average_precision_std": 0.016385,
+      "mean_roc_auc": 0.584726,
+      "recommended_iterations": 56
+    },
+    "v2_catboost": {
+      "feature_set": "v2_checkout_only",
+      "fold_results": [
+        {
+          "fold": 1,
+          "train_rows": 1200,
+          "validation_rows": 583,
+          "train_date_max": "2022-11-16",
+          "validation_date_min": "2022-11-17",
+          "average_precision": 0.371226,
+          "roc_auc": 0.590821,
+          "top_10_percent_precision": 0.396552
+        },
+        {
+          "fold": 2,
+          "train_rows": 1783,
+          "validation_rows": 587,
+          "train_date_max": "2023-04-28",
+          "validation_date_min": "2023-04-29",
+          "average_precision": 0.339993,
+          "roc_auc": 0.564325,
+          "top_10_percent_precision": 0.372881
+        },
+        {
+          "fold": 3,
+          "train_rows": 2370,
+          "validation_rows": 601,
+          "train_date_max": "2023-10-06",
+          "validation_date_min": "2023-10-07",
+          "average_precision": 0.424841,
+          "roc_auc": 0.613853,
+          "top_10_percent_precision": 0.5
+        }
+      ],
+      "mean_average_precision": 0.378687,
+      "average_precision_std": 0.035038,
+      "mean_roc_auc": 0.589666,
+      "recommended_iterations": 32
+    },
+    "v2_logistic": {
+      "feature_set": "v2_checkout_only",
+      "fold_results": [
+        {
+          "fold": 1,
+          "train_rows": 1200,
+          "validation_rows": 583,
+          "train_date_max": "2022-11-16",
+          "validation_date_min": "2022-11-17",
+          "average_precision": 0.296591,
+          "roc_auc": 0.516891,
+          "top_10_percent_precision": 0.275862
+        },
+        {
+          "fold": 2,
+          "train_rows": 1783,
+          "validation_rows": 587,
+          "train_date_max": "2023-04-28",
+          "validation_date_min": "2023-04-29",
+          "average_precision": 0.35186,
+          "roc_auc": 0.572775,
+          "top_10_percent_precision": 0.423729
+        },
+        {
+          "fold": 3,
+          "train_rows": 2370,
+          "validation_rows": 601,
+          "train_date_max": "2023-10-06",
+          "validation_date_min": "2023-10-07",
+          "average_precision": 0.384378,
+          "roc_auc": 0.587335,
+          "top_10_percent_precision": 0.45
+        }
+      ],
+      "mean_average_precision": 0.344276,
+      "average_precision_std": 0.036238,
+      "mean_roc_auc": 0.559,
+      "recommended_iterations": null
+    }
+  },
+  "selected_research_candidate": "v1_catboost",
+  "selected_artifact": "research_selected_candidate.cbm",
+  "selected_minus_v1_cv_average_precision": 0.0,
+  "exploratory_reused_validation": {
+    "v1_catboost": {
+      "prevalence": 0.30754,
+      "roc_auc": 0.587134,
+      "average_precision": 0.409136,
+      "brier_score": 0.209073,
+      "log_loss": 0.608508,
+      "capacity": {
+        "top_10_percent": {
+          "orders_flagged": 101,
+          "precision": 0.485149,
+          "recall": 0.158065,
+          "lift_over_prevalence": 1.577515
+        },
+        "top_20_percent": {
+          "orders_flagged": 202,
+          "precision": 0.430693,
+          "recall": 0.280645,
+          "lift_over_prevalence": 1.400447
+        },
+        "top_30_percent": {
+          "orders_flagged": 302,
+          "precision": 0.403974,
+          "recall": 0.393548,
+          "lift_over_prevalence": 1.313565
+        }
+      }
+    },
+    "v2_catboost": {
+      "prevalence": 0.30754,
+      "roc_auc": 0.604608,
+      "average_precision": 0.400745,
+      "brier_score": 0.20858,
+      "log_loss": 0.607298,
+      "capacity": {
+        "top_10_percent": {
+          "orders_flagged": 101,
+          "precision": 0.49505,
+          "recall": 0.16129,
+          "lift_over_prevalence": 1.609709
+        },
+        "top_20_percent": {
+          "orders_flagged": 202,
+          "precision": 0.425743,
+          "recall": 0.277419,
+          "lift_over_prevalence": 1.38435
+        },
+        "top_30_percent": {
+          "orders_flagged": 302,
+          "precision": 0.42053,
+          "recall": 0.409677,
+          "lift_over_prevalence": 1.3674
+        }
+      }
+    },
+    "v2_logistic": {
+      "prevalence": 0.30754,
+      "roc_auc": 0.587596,
+      "average_precision": 0.376274,
+      "brier_score": 0.210662,
+      "log_loss": 0.611248,
+      "capacity": {
+        "top_10_percent": {
+          "orders_flagged": 101,
+          "precision": 0.39604,
+          "recall": 0.129032,
+          "lift_over_prevalence": 1.287767
+        },
+        "top_20_percent": {
+          "orders_flagged": 202,
+          "precision": 0.391089,
+          "recall": 0.254839,
+          "lift_over_prevalence": 1.27167
+        },
+        "top_30_percent": {
+          "orders_flagged": 302,
+          "precision": 0.377483,
+          "recall": 0.367742,
+          "lift_over_prevalence": 1.22743
+        }
+      }
+    }
+  },
+  "v2_feature_count": 21,
+  "limitations": [
+    "The official held-out test result was already known before this research began.",
+    "The original validation period had already been used in earlier development.",
+    "Synthetic data may not reproduce real merchant return behavior.",
+    "This artifact is not loaded by the API or dashboard."
+  ],
+  "promotion_requirements": [
+    "Collect a new untouched chronologically later outcome set.",
+    "Freeze the candidate and decision policy before opening that set.",
+    "Confirm ranking quality, calibration, false-positive cost, and slice safety."
+  ]
+}

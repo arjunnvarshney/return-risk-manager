@@ -1,0 +1,29 @@
+{
+  "strategy": "chronological_unique_date_60_20_20",
+  "source_file": "returns_sustainability_dataset.csv",
+  "source_sha256": "2d68b7b005b6c7d2a231dba39a74c49f6dd26b16b67270baba3b235fe8a8f999",
+  "test_locked": true,
+  "splits": {
+    "train": {
+      "rows": 2971,
+      "date_min": "2022-01-01",
+      "date_max": "2024-03-14",
+      "return_rate": 0.284753,
+      "order_id_sha256": "24379cd0e5030367d5d7cbb5d985898e88035a52baba79410379e74af764e9c6"
+    },
+    "validation": {
+      "rows": 1008,
+      "date_min": "2024-03-15",
+      "date_max": "2024-12-14",
+      "return_rate": 0.30754,
+      "order_id_sha256": "81bfe79ecaa11dcb241adb2b462181e8cbb85c07d0df3ee90be3f1895717ca0f"
+    },
+    "test": {
+      "rows": 1021,
+      "date_min": "2024-12-15",
+      "date_max": "2025-09-03",
+      "return_rate": 0.287953,
+      "order_id_sha256": "e41e028d67f8f2de02f85daed4e7394a42ff7cc57f37630c7651b20d22a1478b"
+    }
+  }
+}

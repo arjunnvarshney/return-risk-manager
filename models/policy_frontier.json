@@ -1,0 +1,5026 @@
+{
+  "evaluation_partition": "validation_only",
+  "test_set_accessed_for_selection": false,
+  "purpose": "aggregate_counterfactual_policy_simulation",
+  "contains_row_level_data": false,
+  "orders": 1008,
+  "grid_size": 501,
+  "frontier": [
+    {
+      "threshold": 0.0,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.002,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.004,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.006,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.008,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.01,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.012,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.014,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.016,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.018,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.02,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.022,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.024,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.026,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.028,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.03,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.032,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.034,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.036,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.038,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.04,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.042,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.044,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.046,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.048,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.05,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.052,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.054,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.056,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.058,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.06,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.062,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.064,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.066,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.068,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.07,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.072,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.074,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.076,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.078,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.08,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.082,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.084,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.086,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.088,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.09,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.092,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.094,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.096,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.098,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.1,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.102,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.104,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.106,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.108,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.11,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.112,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.114,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.116,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.118,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.12,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.122,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.124,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.126,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.128,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.13,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.132,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.134,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.136,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.138,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.14,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.142,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.144,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.146,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.148,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.15,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.152,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.154,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.156,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.158,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.16,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.162,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.164,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.166,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.168,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.17,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.172,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.174,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.176,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.178,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.18,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.182,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.184,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.186,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.188,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.19,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.192,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.194,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.196,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.198,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.2,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.202,
+      "orders": 1008,
+      "orders_flagged": 1008,
+      "flagged_rate": 1.0,
+      "true_positive": 310,
+      "false_positive": 698,
+      "false_negative": 0,
+      "true_negative": 0
+    },
+    {
+      "threshold": 0.204,
+      "orders": 1008,
+      "orders_flagged": 1007,
+      "flagged_rate": 0.999008,
+      "true_positive": 310,
+      "false_positive": 697,
+      "false_negative": 0,
+      "true_negative": 1
+    },
+    {
+      "threshold": 0.206,
+      "orders": 1008,
+      "orders_flagged": 1006,
+      "flagged_rate": 0.998016,
+      "true_positive": 310,
+      "false_positive": 696,
+      "false_negative": 0,
+      "true_negative": 2
+    },
+    {
+      "threshold": 0.208,
+      "orders": 1008,
+      "orders_flagged": 1005,
+      "flagged_rate": 0.997024,
+      "true_positive": 310,
+      "false_positive": 695,
+      "false_negative": 0,
+      "true_negative": 3
+    },
+    {
+      "threshold": 0.21,
+      "orders": 1008,
+      "orders_flagged": 1004,
+      "flagged_rate": 0.996032,
+      "true_positive": 310,
+      "false_positive": 694,
+      "false_negative": 0,
+      "true_negative": 4
+    },
+    {
+      "threshold": 0.212,
+      "orders": 1008,
+      "orders_flagged": 1004,
+      "flagged_rate": 0.996032,
+      "true_positive": 310,
+      "false_positive": 694,
+      "false_negative": 0,
+      "true_negative": 4
+    },
+    {
+      "threshold": 0.214,
+      "orders": 1008,
+      "orders_flagged": 1003,
+      "flagged_rate": 0.99504,
+      "true_positive": 309,
+      "false_positive": 694,
+      "false_negative": 1,
+      "true_negative": 4
+    },
+    {
+      "threshold": 0.216,
+      "orders": 1008,
+      "orders_flagged": 1002,
+      "flagged_rate": 0.994048,
+      "true_positive": 309,
+      "false_positive": 693,
+      "false_negative": 1,
+      "true_negative": 5
+    },
+    {
+      "threshold": 0.218,
+      "orders": 1008,
+      "orders_flagged": 1002,
+      "flagged_rate": 0.994048,
+      "true_positive": 309,
+      "false_positive": 693,
+      "false_negative": 1,
+      "true_negative": 5
+    },
+    {
+      "threshold": 0.22,
+      "orders": 1008,
+      "orders_flagged": 1001,
+      "flagged_rate": 0.993056,
+      "true_positive": 309,
+      "false_positive": 692,
+      "false_negative": 1,
+      "true_negative": 6
+    },
+    {
+      "threshold": 0.222,
+      "orders": 1008,
+      "orders_flagged": 1000,
+      "flagged_rate": 0.992063,
+      "true_positive": 308,
+      "false_positive": 692,
+      "false_negative": 2,
+      "true_negative": 6
+    },
+    {
+      "threshold": 0.224,
+      "orders": 1008,
+      "orders_flagged": 999,
+      "flagged_rate": 0.991071,
+      "true_positive": 308,
+      "false_positive": 691,
+      "false_negative": 2,
+      "true_negative": 7
+    },
+    {
+      "threshold": 0.226,
+      "orders": 1008,
+      "orders_flagged": 997,
+      "flagged_rate": 0.989087,
+      "true_positive": 307,
+      "false_positive": 690,
+      "false_negative": 3,
+      "true_negative": 8
+    },
+    {
+      "threshold": 0.228,
+      "orders": 1008,
+      "orders_flagged": 997,
+      "flagged_rate": 0.989087,
+      "true_positive": 307,
+      "false_positive": 690,
+      "false_negative": 3,
+      "true_negative": 8
+    },
+    {
+      "threshold": 0.23,
+      "orders": 1008,
+      "orders_flagged": 990,
+      "flagged_rate": 0.982143,
+      "true_positive": 306,
+      "false_positive": 684,
+      "false_negative": 4,
+      "true_negative": 14
+    },
+    {
+      "threshold": 0.232,
+      "orders": 1008,
+      "orders_flagged": 987,
+      "flagged_rate": 0.979167,
+      "true_positive": 306,
+      "false_positive": 681,
+      "false_negative": 4,
+      "true_negative": 17
+    },
+    {
+      "threshold": 0.234,
+      "orders": 1008,
+      "orders_flagged": 984,
+      "flagged_rate": 0.97619,
+      "true_positive": 305,
+      "false_positive": 679,
+      "false_negative": 5,
+      "true_negative": 19
+    },
+    {
+      "threshold": 0.236,
+      "orders": 1008,
+      "orders_flagged": 979,
+      "flagged_rate": 0.97123,
+      "true_positive": 304,
+      "false_positive": 675,
+      "false_negative": 6,
+      "true_negative": 23
+    },
+    {
+      "threshold": 0.238,
+      "orders": 1008,
+      "orders_flagged": 971,
+      "flagged_rate": 0.963294,
+      "true_positive": 303,
+      "false_positive": 668,
+      "false_negative": 7,
+      "true_negative": 30
+    },
+    {
+      "threshold": 0.24,
+      "orders": 1008,
+      "orders_flagged": 965,
+      "flagged_rate": 0.957341,
+      "true_positive": 301,
+      "false_positive": 664,
+      "false_negative": 9,
+      "true_negative": 34
+    },
+    {
+      "threshold": 0.242,
+      "orders": 1008,
+      "orders_flagged": 958,
+      "flagged_rate": 0.950397,
+      "true_positive": 301,
+      "false_positive": 657,
+      "false_negative": 9,
+      "true_negative": 41
+    },
+    {
+      "threshold": 0.244,
+      "orders": 1008,
+      "orders_flagged": 949,
+      "flagged_rate": 0.941468,
+      "true_positive": 300,
+      "false_positive": 649,
+      "false_negative": 10,
+      "true_negative": 49
+    },
+    {
+      "threshold": 0.246,
+      "orders": 1008,
+      "orders_flagged": 939,
+      "flagged_rate": 0.931548,
+      "true_positive": 299,
+      "false_positive": 640,
+      "false_negative": 11,
+      "true_negative": 58
+    },
+    {
+      "threshold": 0.248,
+      "orders": 1008,
+      "orders_flagged": 927,
+      "flagged_rate": 0.919643,
+      "true_positive": 295,
+      "false_positive": 632,
+      "false_negative": 15,
+      "true_negative": 66
+    },
+    {
+      "threshold": 0.25,
+      "orders": 1008,
+      "orders_flagged": 917,
+      "flagged_rate": 0.909722,
+      "true_positive": 294,
+      "false_positive": 623,
+      "false_negative": 16,
+      "true_negative": 75
+    },
+    {
+      "threshold": 0.252,
+      "orders": 1008,
+      "orders_flagged": 907,
+      "flagged_rate": 0.899802,
+      "true_positive": 292,
+      "false_positive": 615,
+      "false_negative": 18,
+      "true_negative": 83
+    },
+    {
+      "threshold": 0.254,
+      "orders": 1008,
+      "orders_flagged": 894,
+      "flagged_rate": 0.886905,
+      "true_positive": 286,
+      "false_positive": 608,
+      "false_negative": 24,
+      "true_negative": 90
+    },
+    {
+      "threshold": 0.256,
+      "orders": 1008,
+      "orders_flagged": 873,
+      "flagged_rate": 0.866071,
+      "true_positive": 281,
+      "false_positive": 592,
+      "false_negative": 29,
+      "true_negative": 106
+    },
+    {
+      "threshold": 0.258,
+      "orders": 1008,
+      "orders_flagged": 855,
+      "flagged_rate": 0.848214,
+      "true_positive": 277,
+      "false_positive": 578,
+      "false_negative": 33,
+      "true_negative": 120
+    },
+    {
+      "threshold": 0.26,
+      "orders": 1008,
+      "orders_flagged": 843,
+      "flagged_rate": 0.83631,
+      "true_positive": 274,
+      "false_positive": 569,
+      "false_negative": 36,
+      "true_negative": 129
+    },
+    {
+      "threshold": 0.262,
+      "orders": 1008,
+      "orders_flagged": 833,
+      "flagged_rate": 0.826389,
+      "true_positive": 271,
+      "false_positive": 562,
+      "false_negative": 39,
+      "true_negative": 136
+    },
+    {
+      "threshold": 0.264,
+      "orders": 1008,
+      "orders_flagged": 817,
+      "flagged_rate": 0.810516,
+      "true_positive": 268,
+      "false_positive": 549,
+      "false_negative": 42,
+      "true_negative": 149
+    },
+    {
+      "threshold": 0.266,
+      "orders": 1008,
+      "orders_flagged": 796,
+      "flagged_rate": 0.789683,
+      "true_positive": 262,
+      "false_positive": 534,
+      "false_negative": 48,
+      "true_negative": 164
+    },
+    {
+      "threshold": 0.268,
+      "orders": 1008,
+      "orders_flagged": 774,
+      "flagged_rate": 0.767857,
+      "true_positive": 257,
+      "false_positive": 517,
+      "false_negative": 53,
+      "true_negative": 181
+    },
+    {
+      "threshold": 0.27,
+      "orders": 1008,
+      "orders_flagged": 755,
+      "flagged_rate": 0.749008,
+      "true_positive": 252,
+      "false_positive": 503,
+      "false_negative": 58,
+      "true_negative": 195
+    },
+    {
+      "threshold": 0.272,
+      "orders": 1008,
+      "orders_flagged": 738,
+      "flagged_rate": 0.732143,
+      "true_positive": 248,
+      "false_positive": 490,
+      "false_negative": 62,
+      "true_negative": 208
+    },
+    {
+      "threshold": 0.274,
+      "orders": 1008,
+      "orders_flagged": 725,
+      "flagged_rate": 0.719246,
+      "true_positive": 247,
+      "false_positive": 478,
+      "false_negative": 63,
+      "true_negative": 220
+    },
+    {
+      "threshold": 0.276,
+      "orders": 1008,
+      "orders_flagged": 714,
+      "flagged_rate": 0.708333,
+      "true_positive": 246,
+      "false_positive": 468,
+      "false_negative": 64,
+      "true_negative": 230
+    },
+    {
+      "threshold": 0.278,
+      "orders": 1008,
+      "orders_flagged": 697,
+      "flagged_rate": 0.691468,
+      "true_positive": 238,
+      "false_positive": 459,
+      "false_negative": 72,
+      "true_negative": 239
+    },
+    {
+      "threshold": 0.28,
+      "orders": 1008,
+      "orders_flagged": 686,
+      "flagged_rate": 0.680556,
+      "true_positive": 233,
+      "false_positive": 453,
+      "false_negative": 77,
+      "true_negative": 245
+    },
+    {
+      "threshold": 0.282,
+      "orders": 1008,
+      "orders_flagged": 670,
+      "flagged_rate": 0.664683,
+      "true_positive": 231,
+      "false_positive": 439,
+      "false_negative": 79,
+      "true_negative": 259
+    },
+    {
+      "threshold": 0.284,
+      "orders": 1008,
+      "orders_flagged": 656,
+      "flagged_rate": 0.650794,
+      "true_positive": 230,
+      "false_positive": 426,
+      "false_negative": 80,
+      "true_negative": 272
+    },
+    {
+      "threshold": 0.286,
+      "orders": 1008,
+      "orders_flagged": 646,
+      "flagged_rate": 0.640873,
+      "true_positive": 228,
+      "false_positive": 418,
+      "false_negative": 82,
+      "true_negative": 280
+    },
+    {
+      "threshold": 0.288,
+      "orders": 1008,
+      "orders_flagged": 640,
+      "flagged_rate": 0.634921,
+      "true_positive": 226,
+      "false_positive": 414,
+      "false_negative": 84,
+      "true_negative": 284
+    },
+    {
+      "threshold": 0.29,
+      "orders": 1008,
+      "orders_flagged": 625,
+      "flagged_rate": 0.62004,
+      "true_positive": 222,
+      "false_positive": 403,
+      "false_negative": 88,
+      "true_negative": 295
+    },
+    {
+      "threshold": 0.292,
+      "orders": 1008,
+      "orders_flagged": 617,
+      "flagged_rate": 0.612103,
+      "true_positive": 220,
+      "false_positive": 397,
+      "false_negative": 90,
+      "true_negative": 301
+    },
+    {
+      "threshold": 0.294,
+      "orders": 1008,
+      "orders_flagged": 609,
+      "flagged_rate": 0.604167,
+      "true_positive": 217,
+      "false_positive": 392,
+      "false_negative": 93,
+      "true_negative": 306
+    },
+    {
+      "threshold": 0.296,
+      "orders": 1008,
+      "orders_flagged": 602,
+      "flagged_rate": 0.597222,
+      "true_positive": 216,
+      "false_positive": 386,
+      "false_negative": 94,
+      "true_negative": 312
+    },
+    {
+      "threshold": 0.298,
+      "orders": 1008,
+      "orders_flagged": 593,
+      "flagged_rate": 0.588294,
+      "true_positive": 215,
+      "false_positive": 378,
+      "false_negative": 95,
+      "true_negative": 320
+    },
+    {
+      "threshold": 0.3,
+      "orders": 1008,
+      "orders_flagged": 586,
+      "flagged_rate": 0.581349,
+      "true_positive": 213,
+      "false_positive": 373,
+      "false_negative": 97,
+      "true_negative": 325
+    },
+    {
+      "threshold": 0.302,
+      "orders": 1008,
+      "orders_flagged": 576,
+      "flagged_rate": 0.571429,
+      "true_positive": 210,
+      "false_positive": 366,
+      "false_negative": 100,
+      "true_negative": 332
+    },
+    {
+      "threshold": 0.304,
+      "orders": 1008,
+      "orders_flagged": 563,
+      "flagged_rate": 0.558532,
+      "true_positive": 208,
+      "false_positive": 355,
+      "false_negative": 102,
+      "true_negative": 343
+    },
+    {
+      "threshold": 0.306,
+      "orders": 1008,
+      "orders_flagged": 554,
+      "flagged_rate": 0.549603,
+      "true_positive": 205,
+      "false_positive": 349,
+      "false_negative": 105,
+      "true_negative": 349
+    },
+    {
+      "threshold": 0.308,
+      "orders": 1008,
+      "orders_flagged": 545,
+      "flagged_rate": 0.540675,
+      "true_positive": 204,
+      "false_positive": 341,
+      "false_negative": 106,
+      "true_negative": 357
+    },
+    {
+      "threshold": 0.31,
+      "orders": 1008,
+      "orders_flagged": 530,
+      "flagged_rate": 0.525794,
+      "true_positive": 202,
+      "false_positive": 328,
+      "false_negative": 108,
+      "true_negative": 370
+    },
+    {
+      "threshold": 0.312,
+      "orders": 1008,
+      "orders_flagged": 519,
+      "flagged_rate": 0.514881,
+      "true_positive": 198,
+      "false_positive": 321,
+      "false_negative": 112,
+      "true_negative": 377
+    },
+    {
+      "threshold": 0.314,
+      "orders": 1008,
+      "orders_flagged": 513,
+      "flagged_rate": 0.508929,
+      "true_positive": 195,
+      "false_positive": 318,
+      "false_negative": 115,
+      "true_negative": 380
+    },
+    {
+      "threshold": 0.316,
+      "orders": 1008,
+      "orders_flagged": 500,
+      "flagged_rate": 0.496032,
+      "true_positive": 191,
+      "false_positive": 309,
+      "false_negative": 119,
+      "true_negative": 389
+    },
+    {
+      "threshold": 0.318,
+      "orders": 1008,
+      "orders_flagged": 487,
+      "flagged_rate": 0.483135,
+      "true_positive": 186,
+      "false_positive": 301,
+      "false_negative": 124,
+      "true_negative": 397
+    },
+    {
+      "threshold": 0.32,
+      "orders": 1008,
+      "orders_flagged": 477,
+      "flagged_rate": 0.473214,
+      "true_positive": 181,
+      "false_positive": 296,
+      "false_negative": 129,
+      "true_negative": 402
+    },
+    {
+      "threshold": 0.322,
+      "orders": 1008,
+      "orders_flagged": 466,
+      "flagged_rate": 0.462302,
+      "true_positive": 177,
+      "false_positive": 289,
+      "false_negative": 133,
+      "true_negative": 409
+    },
+    {
+      "threshold": 0.324,
+      "orders": 1008,
+      "orders_flagged": 457,
+      "flagged_rate": 0.453373,
+      "true_positive": 174,
+      "false_positive": 283,
+      "false_negative": 136,
+      "true_negative": 415
+    },
+    {
+      "threshold": 0.326,
+      "orders": 1008,
+      "orders_flagged": 445,
+      "flagged_rate": 0.441468,
+      "true_positive": 169,
+      "false_positive": 276,
+      "false_negative": 141,
+      "true_negative": 422
+    },
+    {
+      "threshold": 0.328,
+      "orders": 1008,
+      "orders_flagged": 434,
+      "flagged_rate": 0.430556,
+      "true_positive": 167,
+      "false_positive": 267,
+      "false_negative": 143,
+      "true_negative": 431
+    },
+    {
+      "threshold": 0.33,
+      "orders": 1008,
+      "orders_flagged": 421,
+      "flagged_rate": 0.417659,
+      "true_positive": 160,
+      "false_positive": 261,
+      "false_negative": 150,
+      "true_negative": 437
+    },
+    {
+      "threshold": 0.332,
+      "orders": 1008,
+      "orders_flagged": 412,
+      "flagged_rate": 0.40873,
+      "true_positive": 159,
+      "false_positive": 253,
+      "false_negative": 151,
+      "true_negative": 445
+    },
+    {
+      "threshold": 0.334,
+      "orders": 1008,
+      "orders_flagged": 403,
+      "flagged_rate": 0.399802,
+      "true_positive": 155,
+      "false_positive": 248,
+      "false_negative": 155,
+      "true_negative": 450
+    },
+    {
+      "threshold": 0.336,
+      "orders": 1008,
+      "orders_flagged": 394,
+      "flagged_rate": 0.390873,
+      "true_positive": 152,
+      "false_positive": 242,
+      "false_negative": 158,
+      "true_negative": 456
+    },
+    {
+      "threshold": 0.338,
+      "orders": 1008,
+      "orders_flagged": 388,
+      "flagged_rate": 0.384921,
+      "true_positive": 150,
+      "false_positive": 238,
+      "false_negative": 160,
+      "true_negative": 460
+    },
+    {
+      "threshold": 0.34,
+      "orders": 1008,
+      "orders_flagged": 379,
+      "flagged_rate": 0.375992,
+      "true_positive": 149,
+      "false_positive": 230,
+      "false_negative": 161,
+      "true_negative": 468
+    },
+    {
+      "threshold": 0.342,
+      "orders": 1008,
+      "orders_flagged": 371,
+      "flagged_rate": 0.368056,
+      "true_positive": 147,
+      "false_positive": 224,
+      "false_negative": 163,
+      "true_negative": 474
+    },
+    {
+      "threshold": 0.344,
+      "orders": 1008,
+      "orders_flagged": 367,
+      "flagged_rate": 0.364087,
+      "true_positive": 146,
+      "false_positive": 221,
+      "false_negative": 164,
+      "true_negative": 477
+    },
+    {
+      "threshold": 0.346,
+      "orders": 1008,
+      "orders_flagged": 357,
+      "flagged_rate": 0.354167,
+      "true_positive": 146,
+      "false_positive": 211,
+      "false_negative": 164,
+      "true_negative": 487
+    },
+    {
+      "threshold": 0.348,
+      "orders": 1008,
+      "orders_flagged": 349,
+      "flagged_rate": 0.34623,
+      "true_positive": 143,
+      "false_positive": 206,
+      "false_negative": 167,
+      "true_negative": 492
+    },
+    {
+      "threshold": 0.35,
+      "orders": 1008,
+      "orders_flagged": 339,
+      "flagged_rate": 0.33631,
+      "true_positive": 138,
+      "false_positive": 201,
+      "false_negative": 172,
+      "true_negative": 497
+    },
+    {
+      "threshold": 0.352,
+      "orders": 1008,
+      "orders_flagged": 334,
+      "flagged_rate": 0.331349,
+      "true_positive": 135,
+      "false_positive": 199,
+      "false_negative": 175,
+      "true_negative": 499
+    },
+    {
+      "threshold": 0.354,
+      "orders": 1008,
+      "orders_flagged": 330,
+      "flagged_rate": 0.327381,
+      "true_positive": 132,
+      "false_positive": 198,
+      "false_negative": 178,
+      "true_negative": 500
+    },
+    {
+      "threshold": 0.356,
+      "orders": 1008,
+      "orders_flagged": 323,
+      "flagged_rate": 0.320437,
+      "true_positive": 128,
+      "false_positive": 195,
+      "false_negative": 182,
+      "true_negative": 503
+    },
+    {
+      "threshold": 0.358,
+      "orders": 1008,
+      "orders_flagged": 317,
+      "flagged_rate": 0.314484,
+      "true_positive": 125,
+      "false_positive": 192,
+      "false_negative": 185,
+      "true_negative": 506
+    },
+    {
+      "threshold": 0.36,
+      "orders": 1008,
+      "orders_flagged": 308,
+      "flagged_rate": 0.305556,
+      "true_positive": 121,
+      "false_positive": 187,
+      "false_negative": 189,
+      "true_negative": 511
+    },
+    {
+      "threshold": 0.362,
+      "orders": 1008,
+      "orders_flagged": 300,
+      "flagged_rate": 0.297619,
+      "true_positive": 120,
+      "false_positive": 180,
+      "false_negative": 190,
+      "true_negative": 518
+    },
+    {
+      "threshold": 0.364,
+      "orders": 1008,
+      "orders_flagged": 292,
+      "flagged_rate": 0.289683,
+      "true_positive": 117,
+      "false_positive": 175,
+      "false_negative": 193,
+      "true_negative": 523
+    },
+    {
+      "threshold": 0.366,
+      "orders": 1008,
+      "orders_flagged": 288,
+      "flagged_rate": 0.285714,
+      "true_positive": 117,
+      "false_positive": 171,
+      "false_negative": 193,
+      "true_negative": 527
+    },
+    {
+      "threshold": 0.368,
+      "orders": 1008,
+      "orders_flagged": 281,
+      "flagged_rate": 0.27877,
+      "true_positive": 114,
+      "false_positive": 167,
+      "false_negative": 196,
+      "true_negative": 531
+    },
+    {
+      "threshold": 0.37,
+      "orders": 1008,
+      "orders_flagged": 267,
+      "flagged_rate": 0.264881,
+      "true_positive": 109,
+      "false_positive": 158,
+      "false_negative": 201,
+      "true_negative": 540
+    },
+    {
+      "threshold": 0.372,
+      "orders": 1008,
+      "orders_flagged": 258,
+      "flagged_rate": 0.255952,
+      "true_positive": 108,
+      "false_positive": 150,
+      "false_negative": 202,
+      "true_negative": 548
+    },
+    {
+      "threshold": 0.374,
+      "orders": 1008,
+      "orders_flagged": 253,
+      "flagged_rate": 0.250992,
+      "true_positive": 105,
+      "false_positive": 148,
+      "false_negative": 205,
+      "true_negative": 550
+    },
+    {
+      "threshold": 0.376,
+      "orders": 1008,
+      "orders_flagged": 244,
+      "flagged_rate": 0.242063,
+      "true_positive": 103,
+      "false_positive": 141,
+      "false_negative": 207,
+      "true_negative": 557
+    },
+    {
+      "threshold": 0.378,
+      "orders": 1008,
+      "orders_flagged": 232,
+      "flagged_rate": 0.230159,
+      "true_positive": 99,
+      "false_positive": 133,
+      "false_negative": 211,
+      "true_negative": 565
+    },
+    {
+      "threshold": 0.38,
+      "orders": 1008,
+      "orders_flagged": 225,
+      "flagged_rate": 0.223214,
+      "true_positive": 95,
+      "false_positive": 130,
+      "false_negative": 215,
+      "true_negative": 568
+    },
+    {
+      "threshold": 0.382,
+      "orders": 1008,
+      "orders_flagged": 216,
+      "flagged_rate": 0.214286,
+      "true_positive": 91,
+      "false_positive": 125,
+      "false_negative": 219,
+      "true_negative": 573
+    },
+    {
+      "threshold": 0.384,
+      "orders": 1008,
+      "orders_flagged": 206,
+      "flagged_rate": 0.204365,
+      "true_positive": 85,
+      "false_positive": 121,
+      "false_negative": 225,
+      "true_negative": 577
+    },
+    {
+      "threshold": 0.386,
+      "orders": 1008,
+      "orders_flagged": 200,
+      "flagged_rate": 0.198413,
+      "true_positive": 81,
+      "false_positive": 119,
+      "false_negative": 229,
+      "true_negative": 579
+    },
+    {
+      "threshold": 0.388,
+      "orders": 1008,
+      "orders_flagged": 191,
+      "flagged_rate": 0.189484,
+      "true_positive": 80,
+      "false_positive": 111,
+      "false_negative": 230,
+      "true_negative": 587
+    },
+    {
+      "threshold": 0.39,
+      "orders": 1008,
+      "orders_flagged": 182,
+      "flagged_rate": 0.180556,
+      "true_positive": 78,
+      "false_positive": 104,
+      "false_negative": 232,
+      "true_negative": 594
+    },
+    {
+      "threshold": 0.392,
+      "orders": 1008,
+      "orders_flagged": 169,
+      "flagged_rate": 0.167659,
+      "true_positive": 73,
+      "false_positive": 96,
+      "false_negative": 237,
+      "true_negative": 602
+    },
+    {
+      "threshold": 0.394,
+      "orders": 1008,
+      "orders_flagged": 158,
+      "flagged_rate": 0.156746,
+      "true_positive": 70,
+      "false_positive": 88,
+      "false_negative": 240,
+      "true_negative": 610
+    },
+    {
+      "threshold": 0.396,
+      "orders": 1008,
+      "orders_flagged": 152,
+      "flagged_rate": 0.150794,
+      "true_positive": 67,
+      "false_positive": 85,
+      "false_negative": 243,
+      "true_negative": 613
+    },
+    {
+      "threshold": 0.398,
+      "orders": 1008,
+      "orders_flagged": 143,
+      "flagged_rate": 0.141865,
+      "true_positive": 65,
+      "false_positive": 78,
+      "false_negative": 245,
+      "true_negative": 620
+    },
+    {
+      "threshold": 0.4,
+      "orders": 1008,
+      "orders_flagged": 134,
+      "flagged_rate": 0.132937,
+      "true_positive": 64,
+      "false_positive": 70,
+      "false_negative": 246,
+      "true_negative": 628
+    },
+    {
+      "threshold": 0.402,
+      "orders": 1008,
+      "orders_flagged": 125,
+      "flagged_rate": 0.124008,
+      "true_positive": 59,
+      "false_positive": 66,
+      "false_negative": 251,
+      "true_negative": 632
+    },
+    {
+      "threshold": 0.404,
+      "orders": 1008,
+      "orders_flagged": 119,
+      "flagged_rate": 0.118056,
+      "true_positive": 56,
+      "false_positive": 63,
+      "false_negative": 254,
+      "true_negative": 635
+    },
+    {
+      "threshold": 0.406,
+      "orders": 1008,
+      "orders_flagged": 111,
+      "flagged_rate": 0.110119,
+      "true_positive": 54,
+      "false_positive": 57,
+      "false_negative": 256,
+      "true_negative": 641
+    },
+    {
+      "threshold": 0.408,
+      "orders": 1008,
+      "orders_flagged": 106,
+      "flagged_rate": 0.105159,
+      "true_positive": 52,
+      "false_positive": 54,
+      "false_negative": 258,
+      "true_negative": 644
+    },
+    {
+      "threshold": 0.41,
+      "orders": 1008,
+      "orders_flagged": 98,
+      "flagged_rate": 0.097222,
+      "true_positive": 49,
+      "false_positive": 49,
+      "false_negative": 261,
+      "true_negative": 649
+    },
+    {
+      "threshold": 0.412,
+      "orders": 1008,
+      "orders_flagged": 93,
+      "flagged_rate": 0.092262,
+      "true_positive": 46,
+      "false_positive": 47,
+      "false_negative": 264,
+      "true_negative": 651
+    },
+    {
+      "threshold": 0.414,
+      "orders": 1008,
+      "orders_flagged": 85,
+      "flagged_rate": 0.084325,
+      "true_positive": 45,
+      "false_positive": 40,
+      "false_negative": 265,
+      "true_negative": 658
+    },
+    {
+      "threshold": 0.416,
+      "orders": 1008,
+      "orders_flagged": 79,
+      "flagged_rate": 0.078373,
+      "true_positive": 42,
+      "false_positive": 37,
+      "false_negative": 268,
+      "true_negative": 661
+    },
+    {
+      "threshold": 0.418,
+      "orders": 1008,
+      "orders_flagged": 77,
+      "flagged_rate": 0.076389,
+      "true_positive": 41,
+      "false_positive": 36,
+      "false_negative": 269,
+      "true_negative": 662
+    },
+    {
+      "threshold": 0.42,
+      "orders": 1008,
+      "orders_flagged": 72,
+      "flagged_rate": 0.071429,
+      "true_positive": 39,
+      "false_positive": 33,
+      "false_negative": 271,
+      "true_negative": 665
+    },
+    {
+      "threshold": 0.422,
+      "orders": 1008,
+      "orders_flagged": 65,
+      "flagged_rate": 0.064484,
+      "true_positive": 35,
+      "false_positive": 30,
+      "false_negative": 275,
+      "true_negative": 668
+    },
+    {
+      "threshold": 0.424,
+      "orders": 1008,
+      "orders_flagged": 63,
+      "flagged_rate": 0.0625,
+      "true_positive": 34,
+      "false_positive": 29,
+      "false_negative": 276,
+      "true_negative": 669
+    },
+    {
+      "threshold": 0.426,
+      "orders": 1008,
+      "orders_flagged": 56,
+      "flagged_rate": 0.055556,
+      "true_positive": 33,
+      "false_positive": 23,
+      "false_negative": 277,
+      "true_negative": 675
+    },
+    {
+      "threshold": 0.428,
+      "orders": 1008,
+      "orders_flagged": 54,
+      "flagged_rate": 0.053571,
+      "true_positive": 31,
+      "false_positive": 23,
+      "false_negative": 279,
+      "true_negative": 675
+    },
+    {
+      "threshold": 0.43,
+      "orders": 1008,
+      "orders_flagged": 48,
+      "flagged_rate": 0.047619,
+      "true_positive": 27,
+      "false_positive": 21,
+      "false_negative": 283,
+      "true_negative": 677
+    },
+    {
+      "threshold": 0.432,
+      "orders": 1008,
+      "orders_flagged": 46,
+      "flagged_rate": 0.045635,
+      "true_positive": 26,
+      "false_positive": 20,
+      "false_negative": 284,
+      "true_negative": 678
+    },
+    {
+      "threshold": 0.434,
+      "orders": 1008,
+      "orders_flagged": 43,
+      "flagged_rate": 0.042659,
+      "true_positive": 23,
+      "false_positive": 20,
+      "false_negative": 287,
+      "true_negative": 678
+    },
+    {
+      "threshold": 0.436,
+      "orders": 1008,
+      "orders_flagged": 33,
+      "flagged_rate": 0.032738,
+      "true_positive": 18,
+      "false_positive": 15,
+      "false_negative": 292,
+      "true_negative": 683
+    },
+    {
+      "threshold": 0.438,
+      "orders": 1008,
+      "orders_flagged": 29,
+      "flagged_rate": 0.02877,
+      "true_positive": 18,
+      "false_positive": 11,
+      "false_negative": 292,
+      "true_negative": 687
+    },
+    {
+      "threshold": 0.44,
+      "orders": 1008,
+      "orders_flagged": 26,
+      "flagged_rate": 0.025794,
+      "true_positive": 15,
+      "false_positive": 11,
+      "false_negative": 295,
+      "true_negative": 687
+    },
+    {
+      "threshold": 0.442,
+      "orders": 1008,
+      "orders_flagged": 23,
+      "flagged_rate": 0.022817,
+      "true_positive": 14,
+      "false_positive": 9,
+      "false_negative": 296,
+      "true_negative": 689
+    },
+    {
+      "threshold": 0.444,
+      "orders": 1008,
+      "orders_flagged": 23,
+      "flagged_rate": 0.022817,
+      "true_positive": 14,
+      "false_positive": 9,
+      "false_negative": 296,
+      "true_negative": 689
+    },
+    {
+      "threshold": 0.446,
+      "orders": 1008,
+      "orders_flagged": 21,
+      "flagged_rate": 0.020833,
+      "true_positive": 13,
+      "false_positive": 8,
+      "false_negative": 297,
+      "true_negative": 690
+    },
+    {
+      "threshold": 0.448,
+      "orders": 1008,
+      "orders_flagged": 19,
+      "flagged_rate": 0.018849,
+      "true_positive": 12,
+      "false_positive": 7,
+      "false_negative": 298,
+      "true_negative": 691
+    },
+    {
+      "threshold": 0.45,
+      "orders": 1008,
+      "orders_flagged": 17,
+      "flagged_rate": 0.016865,
+      "true_positive": 11,
+      "false_positive": 6,
+      "false_negative": 299,
+      "true_negative": 692
+    },
+    {
+      "threshold": 0.452,
+      "orders": 1008,
+      "orders_flagged": 13,
+      "flagged_rate": 0.012897,
+      "true_positive": 8,
+      "false_positive": 5,
+      "false_negative": 302,
+      "true_negative": 693
+    },
+    {
+      "threshold": 0.454,
+      "orders": 1008,
+      "orders_flagged": 13,
+      "flagged_rate": 0.012897,
+      "true_positive": 8,
+      "false_positive": 5,
+      "false_negative": 302,
+      "true_negative": 693
+    },
+    {
+      "threshold": 0.456,
+      "orders": 1008,
+      "orders_flagged": 10,
+      "flagged_rate": 0.009921,
+      "true_positive": 6,
+      "false_positive": 4,
+      "false_negative": 304,
+      "true_negative": 694
+    },
+    {
+      "threshold": 0.458,
+      "orders": 1008,
+      "orders_flagged": 9,
+      "flagged_rate": 0.008929,
+      "true_positive": 5,
+      "false_positive": 4,
+      "false_negative": 305,
+      "true_negative": 694
+    },
+    {
+      "threshold": 0.46,
+      "orders": 1008,
+      "orders_flagged": 8,
+      "flagged_rate": 0.007937,
+      "true_positive": 5,
+      "false_positive": 3,
+      "false_negative": 305,
+      "true_negative": 695
+    },
+    {
+      "threshold": 0.462,
+      "orders": 1008,
+      "orders_flagged": 8,
+      "flagged_rate": 0.007937,
+      "true_positive": 5,
+      "false_positive": 3,
+      "false_negative": 305,
+      "true_negative": 695
+    },
+    {
+      "threshold": 0.464,
+      "orders": 1008,
+      "orders_flagged": 6,
+      "flagged_rate": 0.005952,
+      "true_positive": 4,
+      "false_positive": 2,
+      "false_negative": 306,
+      "true_negative": 696
+    },
+    {
+      "threshold": 0.466,
+      "orders": 1008,
+      "orders_flagged": 4,
+      "flagged_rate": 0.003968,
+      "true_positive": 2,
+      "false_positive": 2,
+      "false_negative": 308,
+      "true_negative": 696
+    },
+    {
+      "threshold": 0.468,
+      "orders": 1008,
+      "orders_flagged": 4,
+      "flagged_rate": 0.003968,
+      "true_positive": 2,
+      "false_positive": 2,
+      "false_negative": 308,
+      "true_negative": 696
+    },
+    {
+      "threshold": 0.47,
+      "orders": 1008,
+      "orders_flagged": 4,
+      "flagged_rate": 0.003968,
+      "true_positive": 2,
+      "false_positive": 2,
+      "false_negative": 308,
+      "true_negative": 696
+    },
+    {
+      "threshold": 0.472,
+      "orders": 1008,
+      "orders_flagged": 4,
+      "flagged_rate": 0.003968,
+      "true_positive": 2,
+      "false_positive": 2,
+      "false_negative": 308,
+      "true_negative": 696
+    },
+    {
+      "threshold": 0.474,
+      "orders": 1008,
+      "orders_flagged": 2,
+      "flagged_rate": 0.001984,
+      "true_positive": 1,
+      "false_positive": 1,
+      "false_negative": 309,
+      "true_negative": 697
+    },
+    {
+      "threshold": 0.476,
+      "orders": 1008,
+      "orders_flagged": 1,
+      "flagged_rate": 0.000992,
+      "true_positive": 1,
+      "false_positive": 0,
+      "false_negative": 309,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.478,
+      "orders": 1008,
+      "orders_flagged": 1,
+      "flagged_rate": 0.000992,
+      "true_positive": 1,
+      "false_positive": 0,
+      "false_negative": 309,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.48,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.482,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.484,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.486,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.488,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.49,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.492,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.494,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.496,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.498,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.5,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.502,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.504,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.506,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.508,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.51,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.512,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.514,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.516,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.518,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.52,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.522,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.524,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.526,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.528,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.53,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.532,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.534,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.536,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.538,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.54,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.542,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.544,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.546,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.548,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.55,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.552,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.554,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.556,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.558,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.56,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.562,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.564,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.566,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.568,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.57,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.572,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.574,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.576,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.578,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.58,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.582,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.584,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.586,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.588,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.59,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.592,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.594,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.596,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.598,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.6,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.602,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.604,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.606,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.608,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.61,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.612,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.614,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.616,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.618,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.62,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.622,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.624,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.626,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.628,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.63,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.632,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.634,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.636,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.638,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.64,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.642,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.644,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.646,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.648,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.65,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.652,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.654,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.656,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.658,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.66,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.662,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.664,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.666,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.668,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.67,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.672,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.674,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.676,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.678,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.68,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.682,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.684,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.686,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.688,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.69,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.692,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.694,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.696,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.698,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.7,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.702,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.704,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.706,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.708,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.71,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.712,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.714,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.716,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.718,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.72,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.722,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.724,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.726,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.728,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.73,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.732,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.734,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.736,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.738,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.74,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.742,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.744,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.746,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.748,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.75,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.752,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.754,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.756,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.758,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.76,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.762,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.764,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.766,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.768,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.77,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.772,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.774,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.776,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.778,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.78,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.782,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.784,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.786,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.788,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.79,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.792,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.794,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.796,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.798,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.8,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.802,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.804,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.806,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.808,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.81,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.812,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.814,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.816,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.818,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.82,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.822,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.824,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.826,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.828,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.83,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.832,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.834,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.836,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.838,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.84,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.842,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.844,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.846,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.848,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.85,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.852,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.854,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.856,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.858,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.86,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.862,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.864,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.866,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.868,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.87,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.872,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.874,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.876,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.878,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.88,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.882,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.884,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.886,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.888,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.89,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.892,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.894,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.896,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.898,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.9,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.902,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.904,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.906,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.908,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.91,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.912,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.914,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.916,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.918,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.92,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.922,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.924,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.926,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.928,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.93,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.932,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.934,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.936,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.938,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.94,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.942,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.944,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.946,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.948,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.95,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.952,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.954,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.956,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.958,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.96,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.962,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.964,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.966,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.968,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.97,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.972,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.974,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.976,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.978,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.98,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.982,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.984,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.986,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.988,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.99,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.992,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.994,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.996,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 0.998,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    },
+    {
+      "threshold": 1.0,
+      "orders": 1008,
+      "orders_flagged": 0,
+      "flagged_rate": 0.0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 310,
+      "true_negative": 698
+    }
+  ],
+  "limitations": [
+    "Results are hypothetical validation estimates, not production claims.",
+    "Intervention effectiveness is an assumption rather than an observed effect.",
+    "The held-out test result does not participate in threshold selection.",
+    "The operational release remains locked to shadow monitoring."
+  ]
+}
