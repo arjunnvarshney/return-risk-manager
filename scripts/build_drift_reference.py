@@ -5,8 +5,9 @@ import json
 import pandas as pd
 
 from return_risk.config import MODELS_DIR, PROCESSED_DIR
-from return_risk.data import model_input_frame
+from return_risk.data import binary_target, model_input_frame
 from return_risk.drift import build_drift_reference
+from return_risk.explainability import build_target_context
 
 
 def main() -> None:
@@ -17,7 +18,12 @@ def main() -> None:
     train = pd.read_csv(train_path)
     validation = pd.read_csv(validation_path)
     development = pd.concat([train, validation], ignore_index=True)
-    reference = build_drift_reference(model_input_frame(development))
+    development_frame = model_input_frame(development)
+    reference = build_drift_reference(development_frame)
+    reference["target_context"] = build_target_context(
+        development_frame,
+        binary_target(development),
+    )
     reference["source_partitions"] = ["chronological_train", "chronological_validation"]
     reference["test_set_accessed"] = False
     output_path = MODELS_DIR / "drift_reference.json"

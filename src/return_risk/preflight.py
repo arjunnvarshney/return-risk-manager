@@ -122,6 +122,7 @@ def evaluation_evidence_checks(project_root: Path) -> list[CheckResult]:
         manifest = _load_json(project_root / "models" / "release_manifest.json")
         evaluation = _load_json(project_root / "reports" / "final_test_evaluation.json")
         split = _load_json(project_root / "data" / "processed" / "split_manifest.json")
+        drift_reference = _load_json(project_root / "models" / "drift_reference.json")
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         return [CheckResult("Held-out evaluation evidence", False, str(exc))]
 
@@ -137,6 +138,11 @@ def evaluation_evidence_checks(project_root: Path) -> list[CheckResult]:
         and test_data.get("date_min") == split_test.get("date_min")
         and test_data.get("date_max") == split_test.get("date_max")
     )
+    development_rows = sum(
+        int(split.get("splits", {}).get(partition, {}).get("rows", 0))
+        for partition in ("train", "validation")
+    )
+    target_context = drift_reference.get("target_context", {})
     return [
         _check(
             "Chronological test split remains locked",
@@ -169,6 +175,15 @@ def evaluation_evidence_checks(project_root: Path) -> list[CheckResult]:
             and savings_interval.get("upper") < 0,
             "The full 95% savings interval is negative, requiring shadow mode.",
             "A negative upper savings bound was not found in held-out evidence.",
+        ),
+        _check(
+            "Explanation context excludes the held-out test",
+            drift_reference.get("source_partitions")
+            == ["chronological_train", "chronological_validation"]
+            and drift_reference.get("test_set_accessed") is False
+            and target_context.get("orders") == development_rows,
+            f"Context contains {development_rows} training-plus-validation orders only.",
+            "Explanation aggregates are missing or do not match the development partitions.",
         ),
     ]
 

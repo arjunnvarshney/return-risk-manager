@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import html
 import json
+import re
 import sqlite3
 from datetime import UTC, date, datetime
 
@@ -41,9 +42,9 @@ st.markdown(
         --navy:#0b1d42; --mint:#65d9c8; --amber:#e8a324; --surface:#f4f7fb;}
     html, body, [class*="css"] {font-family:Inter,ui-sans-serif,system-ui,-apple-system,
         BlinkMacSystemFont,"Segoe UI",sans-serif;}
-    .stApp {background:radial-gradient(circle at 4% 1%,rgba(47,103,239,.14),transparent 25%),
-        radial-gradient(circle at 96% 7%,rgba(40,196,186,.12),transparent 23%),
-        linear-gradient(180deg,#f7f9fd 0,#edf3f9 48%,#f5f8fc 100%);}
+    .stApp {background:radial-gradient(circle at 4% 1%,rgba(47,103,239,.24),transparent 27%),
+        radial-gradient(circle at 96% 7%,rgba(40,196,186,.16),transparent 24%),
+        linear-gradient(180deg,#071226 0,#0b1830 46%,#0d1d37 100%);}
     .block-container {max-width:1220px; padding-top:1rem; padding-bottom:3rem;}
     [data-testid="stToolbar"], .stAppDeployButton, #MainMenu, footer {display:none!important;}
     [data-testid="stHeader"] {background:transparent;}
@@ -60,8 +61,23 @@ st.markdown(
     [data-testid="stHorizontalBlock"]>[data-testid="stColumn"]:nth-child(4)
         [data-testid="stMetric"] {background:linear-gradient(145deg,#faf8ff,#ebe5ff);
         border-color:#d5caf3; border-top-color:#8a6fd1;}
-    [data-testid="stMetricLabel"] {color:var(--muted); font-size:.78rem;}
+    [data-testid="stMetricLabel"] {color:var(--muted); font-size:.84rem;}
     [data-testid="stMetricValue"] {color:var(--ink); font-weight:600;}
+    [data-testid="stWidgetLabel"] p {font-size:.88rem;}
+    [data-testid="stCaptionContainer"] p {font-size:.8rem; line-height:1.5;}
+    [data-testid="stNumberInputContainer"] {overflow:hidden; background:#fff!important;
+        border:1px solid #9fb5d3!important; border-radius:10px!important;
+        box-shadow:0 3px 10px rgba(29,63,119,.10)!important;}
+    [data-testid="stNumberInputContainer"]:focus-within {border-color:#2f67ef!important;
+        box-shadow:0 0 0 3px rgba(47,103,239,.14)!important;}
+    [data-testid="stNumberInputField"] {background:#fff!important; color:#10213e!important;
+        font-weight:550;}
+    [data-testid="stNumberInputStepDown"], [data-testid="stNumberInputStepUp"] {
+        color:#214575!important; background:#eaf1fb!important;}
+    [data-testid="stNumberInputStepDown"]:hover,
+    [data-testid="stNumberInputStepUp"]:hover {background:#dce8fa!important;}
+    [data-testid="stFileUploaderDropzone"] {background:rgba(255,255,255,.82)!important;
+        border:1px dashed #9fb5d3!important; border-radius:11px!important;}
     [data-testid="stVerticalBlockBorderWrapper"] {border-color:var(--line)!important;
         border-radius:17px!important; background:linear-gradient(145deg,#f9fcff,#ebf3ff);
         box-shadow:0 10px 30px rgba(23,42,80,.08);}
@@ -72,15 +88,16 @@ st.markdown(
     [data-testid="stFormSubmitButton"] button:hover {border-color:#1748d3;}
     .rr-topbar {display:flex; align-items:center; justify-content:space-between; gap:18px;
         padding:10px 3px 13px;}
-    .rr-brand {display:flex; align-items:center; gap:11px; color:var(--ink);}
+    .rr-brand {display:flex; align-items:center; gap:11px; color:#f8fbff;}
     .rr-brand-mark {display:grid; place-items:center; width:36px; height:36px;
         border-radius:11px; color:white; background:linear-gradient(145deg,#316bff,#1748d3);
         box-shadow:0 8px 18px rgba(49,107,255,.24); font-size:1.05rem;}
     .rr-brand strong,.rr-brand span {display:block;}
-    .rr-brand strong {font-size:.9rem; letter-spacing:.035em;}
-    .rr-brand span {margin-top:1px; color:var(--muted); font-size:.68rem;}
-    .rr-status {display:flex; align-items:center; gap:8px; color:#8a5b00;
-        font-size:.76rem; font-weight:600;}
+    .rr-brand strong {font-size:1rem; letter-spacing:.035em;}
+    .rr-brand span {margin-top:1px; color:#b4c2d6; font-size:.78rem;}
+    .rr-status {display:flex; align-items:center; gap:8px; padding:8px 11px;
+        border:1px solid rgba(232,163,36,.35); border-radius:999px; color:#ffd47c;
+        background:rgba(232,163,36,.10); font-size:.8rem; font-weight:700;}
     .rr-status-dot {width:8px; height:8px; border-radius:50%; background:#e8a324;
         box-shadow:0 0 0 4px rgba(232,163,36,.14);}
     .hero {display:grid; grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);
@@ -89,34 +106,44 @@ st.markdown(
         linear-gradient(125deg,#0b1d42,#173b82 62%,#2056bd); color:white;
         padding:34px 38px; border-radius:20px; margin-bottom:15px;
         box-shadow:0 18px 44px rgba(12,35,79,.16);}
-    .hero .eyebrow {font-size:.69rem; letter-spacing:.13em; color:#85efe0;
+    .hero .eyebrow {font-size:.76rem; letter-spacing:.13em; color:#85efe0;
         font-weight:700; text-transform:uppercase;}
     .hero h1 {max-width:680px; font-size:clamp(2rem,4vw,3.15rem); letter-spacing:-.045em;
         line-height:1.04; margin:9px 0 12px; color:white;}
-    .hero p {max-width:650px; color:rgba(238,246,255,.78); margin:0;
-        font-size:.94rem; line-height:1.55;}
+    .hero p {max-width:650px; color:rgba(238,246,255,.82); margin:0;
+        font-size:1.02rem; line-height:1.6;}
     .rr-flow {display:grid; grid-template-columns:repeat(3,1fr); gap:7px; margin-top:22px;}
     .rr-step {padding:10px 11px; border:1px solid rgba(255,255,255,.14);
-        border-radius:10px; background:rgba(255,255,255,.07); font-size:.68rem;}
-    .rr-step b {display:block; margin-bottom:3px; color:#85efe0; font-size:.65rem;}
+        border-radius:10px; background:rgba(255,255,255,.07); font-size:.76rem;}
+    .rr-step b {display:block; margin-bottom:3px; color:#85efe0; font-size:.72rem;}
     .rr-proof {padding:18px; border:1px solid rgba(255,255,255,.16); border-radius:15px;
         background:rgba(5,17,43,.34); backdrop-filter:blur(10px);}
-    .rr-proof-label {color:rgba(255,255,255,.62); font-size:.64rem;
+    .rr-proof-label {color:rgba(255,255,255,.62); font-size:.7rem;
         letter-spacing:.09em; text-transform:uppercase;}
     .rr-proof-grid {display:grid; grid-template-columns:repeat(3,1fr); gap:10px;
         margin-top:13px;}
     .rr-proof-grid strong,.rr-proof-grid span {display:block;}
     .rr-proof-grid strong {color:white; font-size:1.08rem;}
-    .rr-proof-grid span {margin-top:2px; color:rgba(255,255,255,.58); font-size:.59rem;}
+    .rr-proof-grid span {margin-top:2px; color:rgba(255,255,255,.68); font-size:.72rem;}
+    .rr-shadow-explainer {display:flex; align-items:center; justify-content:space-between;
+        gap:18px; margin:0 0 15px; padding:14px 17px; border:1px solid #365279;
+        border-left:4px solid #e8a324; border-radius:13px; color:#c9d7eb;
+        background:linear-gradient(110deg,rgba(18,39,73,.96),rgba(12,31,59,.96));
+        box-shadow:0 10px 25px rgba(0,0,0,.16);}
+    .rr-shadow-explainer b {display:block; margin-bottom:3px; color:#fff; font-size:.9rem;}
+    .rr-shadow-explainer span {font-size:.8rem; line-height:1.5;}
+    .rr-shadow-pill {flex:0 0 auto; padding:7px 10px; border-radius:999px;
+        color:#ffd47c; background:rgba(232,163,36,.12); font-size:.72rem!important;
+        font-weight:750; white-space:nowrap;}
     .rr-section-head {margin:4px 0 17px;}
     .rr-section-head h2 {margin:0; color:var(--ink); font-size:1.45rem;
         letter-spacing:-.025em;}
-    .rr-section-head p {margin:5px 0 0; color:var(--muted); font-size:.82rem;}
+    .rr-section-head p {margin:5px 0 0; color:var(--muted); font-size:.9rem;}
     .rr-panel-head {display:flex; align-items:center; gap:10px; margin-bottom:8px;}
     .rr-panel-icon {display:grid; place-items:center; width:30px; height:30px;
         border-radius:9px; background:#edf3ff; color:#245de1; font-size:.9rem;}
-    .rr-panel-head b {font-size:.95rem; color:var(--ink);}
-    .rr-panel-caption {color:var(--muted); font-size:.75rem; margin:-2px 0 16px;}
+    .rr-panel-head b {font-size:1rem; color:var(--ink);}
+    .rr-panel-caption {color:var(--muted); font-size:.82rem; margin:-2px 0 16px;}
     .rr-empty {display:flex; min-height:420px; flex-direction:column; align-items:center;
         justify-content:center; padding:25px; text-align:center;
         background:radial-gradient(circle at 50% 38%,rgba(47,103,239,.08),transparent 31%);}
@@ -125,10 +152,20 @@ st.markdown(
         border:8px solid #f6f9ff; font-size:1.45rem;}
     .rr-empty h3 {margin:0; color:var(--ink); font-size:1.05rem;}
     .rr-empty p {max-width:310px; margin:7px 0 17px; color:var(--muted);
-        font-size:.78rem; line-height:1.5;}
+        font-size:.85rem; line-height:1.55;}
     .rr-mini-flow {display:flex; flex-wrap:wrap; justify-content:center; gap:7px;}
     .rr-mini-flow span {padding:6px 9px; border:1px solid var(--line); border-radius:999px;
-        color:#52627a; background:#fff; font-size:.66rem;}
+        color:#52627a; background:#fff; font-size:.75rem;}
+    .rr-batch-guide {display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
+        gap:9px; margin:0 0 17px;}
+    .rr-batch-step {padding:11px 13px; border:1px solid #cbd9ec; border-radius:11px;
+        color:#52627a; background:rgba(255,255,255,.58); font-size:.76rem; line-height:1.45;}
+    .rr-batch-step b {display:block; margin-bottom:3px; color:#245de1; font-size:.7rem;
+        letter-spacing:.04em;}
+    .rr-exposure-formula {margin:11px 0 14px; padding:10px 13px;
+        border:1px solid #bcded8; border-radius:10px; color:#315d57;
+        background:#effaf7; font-size:.79rem; line-height:1.5;}
+    .rr-exposure-formula b {color:#135f53;}
     .rr-result {padding:3px 1px 1px;}
     .rr-score-zone {display:grid; grid-template-columns:145px minmax(0,1fr); gap:17px;
         align-items:center; margin:15px 0 18px;}
@@ -139,32 +176,76 @@ st.markdown(
     .rr-score {position:relative; z-index:1; text-align:center;}
     .rr-score strong,.rr-score span {display:block;}
     .rr-score strong {color:var(--ink); font-size:1.85rem; letter-spacing:-.04em;}
-    .rr-score span {margin-top:2px; color:var(--muted); font-size:.61rem;
+    .rr-score span {margin-top:2px; color:var(--muted); font-size:.72rem;
         text-transform:uppercase; letter-spacing:.08em;}
     .rr-verdict {display:inline-block; padding:6px 8px; border-radius:8px;
-        font-size:.65rem; font-weight:700;}
+        font-size:.72rem; font-weight:700;}
     .rr-verdict-high {color:#8b5b00; background:#fff7e6;}
     .rr-verdict-low {color:#08775e; background:#ecfdf5;}
     .rr-result-copy h3 {margin:9px 0 5px; color:var(--ink); font-size:1.05rem;}
-    .rr-result-copy p {margin:0; color:var(--muted); font-size:.72rem; line-height:1.5;}
+    .rr-result-copy p {margin:0; color:var(--muted); font-size:.8rem; line-height:1.5;}
     .rr-fact-list {display:grid; gap:8px; padding:15px 0; margin:4px 0 14px;
         border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
     .rr-fact {display:flex; justify-content:space-between; gap:12px; color:var(--muted);
-        font-size:.71rem;}
+        font-size:.79rem;}
     .rr-fact b {color:var(--ink);}
     .decision {display:flex; gap:10px; background:#effaf7; border:1px solid #b9e3da;
-        border-radius:12px; padding:12px 14px; color:#245e55; margin:10px 0; font-size:.75rem;}
+        border-radius:12px; padding:12px 14px; color:#245e55; margin:10px 0; font-size:.82rem;}
+    .rr-action-grid {display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:10px; margin:13px 0 5px;}
+    .rr-action-card {min-width:0; padding:13px 14px; border:1px solid #c8d8ed;
+        border-top:3px solid #6f99ed; border-radius:12px;
+        background:linear-gradient(145deg,#f8fbff,#e9f1ff);}
+    .rr-action-card span,.rr-action-card strong,.rr-action-card small {display:block;}
+    .rr-action-card span {color:var(--muted); font-size:.75rem; font-weight:650;}
+    .rr-action-card strong {margin:5px 0 4px; color:var(--ink); font-size:1rem;
+        line-height:1.25; overflow-wrap:anywhere;}
+    .rr-action-card small {color:#66758b; font-size:.75rem; line-height:1.45;}
+    .rr-action-routine {border-top-color:#36b9a6;
+        background:linear-gradient(145deg,#f5fffc,#e3f7f2);}
+    .rr-action-review {border-top-color:#e8a324;
+        background:linear-gradient(145deg,#fffaf0,#ffedcd);}
+    .rr-action-warning {border-top-color:#d9783d;
+        background:linear-gradient(145deg,#fff8f3,#fde9dd);}
+    .rr-action-operational {border-top-color:#36b9a6;
+        background:linear-gradient(145deg,#f3fcfa,#dff5ef);}
+    .rr-reason-list {display:grid; gap:9px; margin:9px 0;}
+    .rr-score-explain-summary {margin:8px 0 13px; padding:12px 14px;
+        border:1px solid #c7d9f5; border-left:4px solid #2f67ef; border-radius:10px;
+        color:#30445f; background:#f2f7ff; font-size:.82rem; line-height:1.5;}
+    .rr-score-explain-summary b {color:var(--ink);}
+    .rr-reason-card {padding:12px 13px; border:1px solid #cfdaea; border-radius:11px;
+        background:rgba(255,255,255,.72);}
+    .rr-reason-head {display:flex; justify-content:space-between; gap:10px;
+        align-items:flex-start; margin-bottom:6px;}
+    .rr-reason-head strong {color:var(--ink); font-size:.86rem;}
+    .rr-reason-head span {flex:0 0 auto; padding:3px 6px; border-radius:999px;
+        font-size:.7rem; font-weight:700;}
+    .rr-effect-raised {color:#8b5b00; background:#fff1cf;}
+    .rr-effect-lowered {color:#08775e; background:#ddf7f0;}
+    .rr-reason-value {margin-bottom:5px; color:#40516a; font-size:.77rem;}
+    .rr-reason-card p {margin:0; color:#617087; font-size:.76rem; line-height:1.55;}
     .evidence-note {border-left:4px solid var(--blue); background:#f8fafc;
         padding:12px 15px; border-radius:0 9px 9px 0; color:var(--ink);}
     .allow {background:#ecfdf5; color:#047857; border:1px solid #6ee7b7;
         border-radius:10px; padding:12px 14px;}
     .block {background:#fff1f2; color:#9f1239; border:1px solid #fda4af;
         border-radius:10px; padding:12px 14px;}
-    div[data-testid="stTabs"] button {font-weight:650; padding-top:.75rem; padding-bottom:.75rem;
-        border-radius:9px 9px 0 0;}
-    div[data-testid="stTabs"] button[aria-selected="true"] {color:#174fcf;
-        background:linear-gradient(180deg,#edf3ff,rgba(237,243,255,0));}
-    div[data-testid="stTabs"] [data-baseweb="tab-list"] {gap:1rem;}
+    div[data-testid="stTabs"] [role="tab"] {min-height:42px; margin-bottom:3px;
+        padding:.6rem .8rem;
+        border:1px solid transparent; border-radius:10px; color:#c8d4e5!important;
+        font-size:.9rem; font-weight:650; transition:background .18s ease,
+        border-color .18s ease,box-shadow .18s ease;}
+    div[data-testid="stTabs"] [role="tab"] p {color:inherit!important;
+        font-size:inherit!important;}
+    div[data-testid="stTabs"] [role="tab"]:hover {color:#fff!important;
+        border-color:rgba(142,172,231,.32); background:rgba(255,255,255,.07);}
+    div[data-testid="stTabs"] [role="tab"][aria-selected="true"] {color:#fff!important;
+        border-color:#6f99ed; background:linear-gradient(135deg,#2857c8,#173b82);
+        box-shadow:0 8px 20px rgba(24,67,163,.34),inset 0 1px 0 rgba(255,255,255,.12);}
+    div[data-testid="stTabs"] .react-aria-SelectionIndicator {display:none!important;}
+    div[data-testid="stTabs"] [role="tablist"] {gap:.35rem; padding-bottom:6px;
+        border-bottom:1px solid rgba(128,153,194,.42);}
     div[data-testid="stTabs"] [data-baseweb="tab-border"] {background-color:var(--line);}
     div[data-testid="stTabs"] [role="tabpanel"] {margin-top:12px; padding:22px 24px 28px;
         border:1px solid #bfd0e7; border-top:4px solid #6e95ed; border-radius:18px;
@@ -176,11 +257,11 @@ st.markdown(
     .rr-trust-item {padding:12px 14px; background:#fbfcfe;}
     .rr-trust-item b,.rr-trust-item span {display:block;}
     .rr-trust-item b {color:var(--ink); font-size:.76rem;}
-    .rr-trust-item span {margin-top:2px; color:var(--muted); font-size:.64rem;}
+    .rr-trust-item span {margin-top:2px; color:var(--muted); font-size:.72rem;}
     .rr-chart-shell {padding:16px 17px 10px; border:1px solid var(--line);
         border-radius:14px; background:#fff; box-shadow:0 5px 18px rgba(15,23,42,.035);}
     .rr-chart-shell svg {display:block; width:100%; height:auto; overflow:visible;}
-    .rr-chart-axis {fill:#718096; font-size:10px;}
+    .rr-chart-axis {fill:#718096; font-size:11px;}
     .rr-chart-grid {stroke:#dfe6f0; stroke-width:1; stroke-dasharray:4 5;}
     .rr-chart-zero {stroke:#e29b20; stroke-width:1.2; stroke-dasharray:5 4;}
     .rr-chart-line {fill:none; stroke:#2f67ef; stroke-width:3;
@@ -192,20 +273,20 @@ st.markdown(
     .rr-mini-chart h4 {margin:0 0 13px; color:var(--ink); font-size:.84rem;}
     .rr-bar-row {display:grid; grid-template-columns:95px minmax(0,1fr) 58px;
         gap:9px; align-items:center; margin:8px 0;}
-    .rr-bar-label {overflow:hidden; color:#5e6c82; font-size:.66rem;
+    .rr-bar-label {overflow:hidden; color:#5e6c82; font-size:.72rem;
         text-overflow:ellipsis; white-space:nowrap;}
     .rr-bar-track {height:8px; overflow:hidden; border-radius:999px; background:#edf2f8;}
     .rr-bar-fill {height:100%; border-radius:999px;
         background:linear-gradient(90deg,#316bff,#65a4ff);}
-    .rr-bar-value {color:#43516a; font-size:.64rem; text-align:right;}
+    .rr-bar-value {color:#43516a; font-size:.72rem; text-align:right;}
     .rr-judge-grid {display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
         gap:13px; margin:16px 0;}
     .rr-judge-card {padding:17px 18px; border:1px solid var(--line); border-radius:14px;
         background:#fff; box-shadow:0 6px 20px rgba(15,23,42,.04);}
-    .rr-judge-card span {display:block; color:#2f67ef; font-size:.64rem; font-weight:750;
+    .rr-judge-card span {display:block; color:#2f67ef; font-size:.72rem; font-weight:750;
         letter-spacing:.08em; text-transform:uppercase;}
     .rr-judge-card b {display:block; margin:7px 0 5px; color:var(--ink); font-size:.92rem;}
-    .rr-judge-card p {margin:0; color:var(--muted); font-size:.72rem; line-height:1.5;}
+    .rr-judge-card p {margin:0; color:var(--muted); font-size:.8rem; line-height:1.55;}
     .rr-judge-card:nth-child(1) {background:linear-gradient(145deg,#fff,#eef4ff);
         border-color:#cdddfb;}
     .rr-judge-card:nth-child(2) {background:linear-gradient(145deg,#fff,#ecfaf7);
@@ -217,8 +298,8 @@ st.markdown(
     .rr-architecture div {position:relative; min-height:72px; padding:12px 10px;
         border:1px solid #c6d7f0; border-radius:11px;
         background:linear-gradient(145deg,#f5f9ff,#e2edff);
-        color:#44546c; font-size:.68rem; line-height:1.35;}
-    .rr-architecture b {display:block; margin-bottom:5px; color:#255bd7; font-size:.62rem;}
+        color:#44546c; font-size:.76rem; line-height:1.4;}
+    .rr-architecture b {display:block; margin-bottom:5px; color:#255bd7; font-size:.7rem;}
     .rr-preset-row {margin:0 0 13px; padding:13px 14px; border:1px solid var(--line);
         border-radius:13px; background:linear-gradient(120deg,#eef4ff,#f4fbfa);}
     .rr-feature-hint {display:flex; gap:12px; align-items:flex-start; margin:0 0 17px;
@@ -226,8 +307,8 @@ st.markdown(
     .rr-feature-hint .icon {display:grid; place-items:center; flex:0 0 30px; width:30px;
         height:30px; border-radius:9px; font-weight:750;}
     .rr-feature-hint b,.rr-feature-hint span {display:block;}
-    .rr-feature-hint b {font-size:.78rem; color:var(--ink);}
-    .rr-feature-hint span {margin-top:2px; color:#5f6f86; font-size:.71rem; line-height:1.45;}
+    .rr-feature-hint b {font-size:.86rem; color:var(--ink);}
+    .rr-feature-hint span {margin-top:2px; color:#5f6f86; font-size:.78rem; line-height:1.5;}
     .rr-hint-blue {background:#eef4ff; border-color:#cbdcfb;}
     .rr-hint-blue .icon {background:#dce8ff; color:#245de1;}
     .rr-hint-mint {background:#edf9f7; border-color:#c7e9e2;}
@@ -242,10 +323,14 @@ st.markdown(
         .rr-score-zone {grid-template-columns:1fr; justify-items:center; text-align:center;}
         .rr-architecture {grid-template-columns:repeat(3,1fr);}}
     @media (max-width:700px) {.block-container {padding-left:.8rem; padding-right:.8rem;}
-        .rr-topbar {align-items:flex-start;} .rr-status span:last-child {display:none;}
+        .rr-topbar {align-items:stretch; flex-direction:column;}
+        .rr-status {align-self:flex-start; font-size:.7rem; padding:7px 9px;}
         .hero {padding:24px 19px;} .hero h1 {font-size:2rem;}
-        .rr-flow,.rr-proof-grid,.rr-trust-strip,.rr-viz-grid,.rr-judge-grid,
-        .rr-architecture {grid-template-columns:1fr;}}
+        .rr-shadow-explainer {align-items:flex-start; flex-direction:column;}
+        .rr-flow,.rr-trust-strip,.rr-viz-grid,.rr-judge-grid,.rr-batch-guide,
+        .rr-action-grid,
+        .rr-architecture {grid-template-columns:1fr;}
+        .rr-proof-grid {grid-template-columns:repeat(3,minmax(0,1fr));}}
     </style>
     """,
     unsafe_allow_html=True,
@@ -269,7 +354,43 @@ def load_runtime_evidence() -> tuple[dict, dict]:
 
 
 def readable_feature(name: str) -> str:
-    return name.replace("_", " ").title()
+    labels = {
+        "Product_Category": "Product category",
+        "Discount_Applied": "Discount",
+        "order_year": "Order date pattern",
+    }
+    return labels.get(name, name.replace("_", " ").capitalize())
+
+
+def plain_reason(technical_reason: str, direction: str) -> str:
+    """Translate auditable model evidence into judge-friendly language."""
+    comparison = re.search(
+        r"returned at (?P<rate>[\d.]+%) versus (?P<overall>[\d.]+%) overall",
+        technical_reason,
+    )
+    effect = "raised" if direction == "raised" else "lowered"
+    if comparison:
+        rate = comparison.group("rate")
+        overall = comparison.group("overall")
+        frequency = "more" if float(rate.rstrip("%")) > float(overall.rstrip("%")) else "less"
+        return (
+            f"Similar orders returned {frequency} often than average in past data—"
+            f"{rate} compared with {overall}. Therefore, this factor {effect} the risk score."
+        )
+    if technical_reason.startswith("No ") and "used in development" in technical_reason:
+        return (
+            "This date is outside the period used to develop the model, so its effect is "
+            "less certain. Treat it as a time-pattern warning, not a cause of returns."
+        )
+    if technical_reason.startswith("No development orders fell"):
+        return (
+            "There were too few similar past orders to explain this factor confidently. "
+            f"The model still {effect} the score, but this signal is less reliable."
+        )
+    return (
+        f"This factor {effect} the score based on patterns learned from past development "
+        "data. It does not mean the factor causes a return."
+    )
 
 
 def policy_frontier_chart(frame: pd.DataFrame) -> str:
@@ -369,7 +490,7 @@ DEMO_PRESETS = {
         "order_discount": 0.0,
         "order_shipping": "Express",
         "order_payment": "Credit Card",
-        "order_date": date(2025, 8, 15),
+        "order_date": date(2024, 12, 1),
         "demo_preset_notice": "Routine example loaded — expected to remain below the review line.",
     },
     "elevated": {
@@ -379,7 +500,7 @@ DEMO_PRESETS = {
         "order_discount": 50.0,
         "order_shipping": "Standard",
         "order_payment": "COD",
-        "order_date": date(2025, 8, 15),
+        "order_date": date(2024, 12, 1),
         "demo_preset_notice": "Elevated example loaded — expected to cross the frozen review line.",
     },
     "warning": {
@@ -403,7 +524,7 @@ DEFAULT_ORDER_INPUTS = {
     "order_discount": 25.0,
     "order_shipping": "Standard",
     "order_payment": "Credit Card",
-    "order_date": date(2025, 8, 15),
+    "order_date": date(2024, 12, 1),
 }
 
 
@@ -427,7 +548,7 @@ st.markdown(
         <span>Razorpay Buildathon · AI Risk Manager</span></div>
       </div>
       <div class="rr-status"><span class="rr-status-dot"></span>
-      <span>SHADOW MODE · NO ORDER BLOCKING</span></div>
+      <span>SHADOW MODE · SCORES ONLY</span></div>
     </div>
     <div class="hero">
       <div>
@@ -450,6 +571,13 @@ st.markdown(
         </div>
       </div>
     </div>
+    <div class="rr-shadow-explainer">
+      <div><b>What shadow mode means</b>
+      <span>The model scores and explains orders, then records outcomes for evaluation—but it
+      cannot block or delay an order, add customer verification, or change return rights. This
+      safety gate is active because held-out intervention economics were negative.</span></div>
+      <span class="rr-shadow-pill">NO CUSTOMER ACTION</span>
+    </div>
     """,
     unsafe_allow_html=True,
 )
@@ -458,7 +586,7 @@ overview_tab, detector_tab, batch_tab, monitoring_tab, policy_tab, evidence_tab 
     [
         "Judge overview",
         "Try the detector",
-        "Batch review",
+        "Batch risk review",
         "Monitor outcomes",
         "Policy Lab",
         "Model evidence",
@@ -539,7 +667,7 @@ with overview_tab:
             st.markdown(
                 "1. Open **Try the detector** and load the elevated preset\n"
                 "2. Calculate the score and inspect its reason codes\n"
-                "3. Run the one-click demo in **Batch review**\n"
+                "3. Run the one-click demo in **Batch risk review**\n"
                 "4. Show **Policy Lab** false-positive economics\n"
                 "5. Finish on **Model evidence** and the shadow-mode decision"
             )
@@ -700,6 +828,11 @@ with detector_tab:
                 )
             else:
                 gauge_value = min(max(result.risk_score * 100, 0), 100)
+                input_warnings = [
+                    warning
+                    for warning in result.warnings
+                    if not warning.startswith("Held-out testing")
+                ]
                 verdict_class = (
                     "rr-verdict-high"
                     if result.would_flag_under_frozen_policy
@@ -710,11 +843,15 @@ with detector_tab:
                     if result.would_flag_under_frozen_policy
                     else "BELOW REVIEW LINE"
                 )
-                recommendation = (
-                    "Review suggested"
-                    if result.would_flag_under_frozen_policy
-                    else "Routine monitoring"
-                )
+                if input_warnings:
+                    recommendation = "Abstain — reliability warning"
+                    recommendation_tone = "warning"
+                elif result.would_flag_under_frozen_policy:
+                    recommendation = "Human-review candidate"
+                    recommendation_tone = "review"
+                else:
+                    recommendation = "No review signal"
+                    recommendation_tone = "routine"
                 st.markdown(
                     f"""
                     <div class="rr-result">
@@ -746,14 +883,25 @@ with detector_tab:
                     """,
                     unsafe_allow_html=True,
                 )
-                input_warnings = [
-                    warning
-                    for warning in result.warnings
-                    if not warning.startswith("Held-out testing")
-                ]
                 for warning in input_warnings:
                     st.warning(warning)
-                st.metric("Safe action", "Monitor only")
+                st.markdown(
+                    f"""
+                    <div class="rr-action-grid">
+                      <div class="rr-action-card rr-action-{recommendation_tone}">
+                        <span>Decision support</span>
+                        <strong>{html.escape(recommendation)}</strong>
+                        <small>Order-level model recommendation</small>
+                      </div>
+                      <div class="rr-action-card rr-action-operational">
+                        <span>Permitted operational action</span>
+                        <strong>Monitor only</strong>
+                        <small>Release-wide safety policy</small>
+                      </div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True,
+                )
 
                 reasons = pd.DataFrame(
                     [reason.model_dump() for reason in result.reasons]
@@ -763,24 +911,53 @@ with detector_tab:
                     {"raised": "Raised risk", "lowered": "Lowered risk"}
                 )
                 with st.expander("Why this score?", expanded=True):
-                    st.caption("The strongest model influences for this order.")
-                    st.dataframe(
-                        reasons[["feature", "value", "effect"]],
-                        column_config={
-                            "feature": "Factor",
-                            "value": "Order value",
-                            "effect": "Effect",
-                        },
-                        hide_index=True,
-                        width="stretch",
+                    threshold_position = (
+                        "above" if result.would_flag_under_frozen_policy else "below"
+                    )
+                    st.markdown(
+                        f"""
+                        <div class="rr-score-explain-summary">
+                        <b>This order scored {result.risk_score:.1%}.</b> The review line is
+                        {result.decision_threshold:.1%}, so the score is {threshold_position}
+                        the review line. The permitted action remains monitor only.
+                        </div>
+                        """,
+                        unsafe_allow_html=True,
+                    )
+                    st.caption("These three factors influenced this order's score the most.")
+                    reason_cards = []
+                    for row in reasons.to_dict(orient="records"):
+                        plain_explanation = plain_reason(
+                            str(row["reason"]), str(row["direction"])
+                        )
+                        reason_cards.append(
+                            '<div class="rr-reason-card">'
+                            '<div class="rr-reason-head">'
+                            f"<strong>{html.escape(str(row['feature']))}</strong>"
+                            f'<span class="rr-effect-{row["direction"]}">'
+                            f"{html.escape(str(row['effect']))}</span></div>"
+                            f'<div class="rr-reason-value">This order: '
+                            f"{html.escape(str(row['value']))}</div>"
+                            f"<p>{html.escape(plain_explanation)}</p></div>"
+                        )
+                    st.markdown(
+                        '<div class="rr-reason-list">' + "".join(reason_cards) + "</div>",
+                        unsafe_allow_html=True,
                     )
                     st.caption(
-                        "SHAP explains model behavior; it does not establish causality."
+                        "Past return rates explain the pattern the model learned. They do not "
+                        "mean that any factor causes a return."
                     )
                 st.caption(
                     f"Audit ID `{prediction_id}` · record the outcome after the return window"
                 )
-                with st.expander("Technical SHAP values"):
+                with st.expander("Technical details (sample sizes and SHAP)"):
+                    st.caption("Detailed development-data evidence used for the explanations:")
+                    for row in reasons.to_dict(orient="records"):
+                        st.markdown(
+                            f"**{row['feature']}:** {row['reason']}",
+                        )
+                    st.caption("SHAP contributions are shown in raw log-odds space:")
                     st.dataframe(
                         reasons[["feature", "shap_log_odds"]],
                         column_config={
@@ -905,39 +1082,67 @@ with monitoring_tab:
             )
 
     def render_batch_review() -> None:
+        st.markdown(
+            '<div class="evidence-note"><b>Estimate financial exposure—not return '
+            "probability.</b> These merchant assumptions never change the model's risk "
+            "score. They are used only to estimate and rank the possible financial loss "
+            "from each return.</div>",
+            unsafe_allow_html=True,
+        )
+        st.write("")
         exposure_first, exposure_second = st.columns(2)
         with exposure_first:
-            reverse_logistics_cost = st.number_input(
-                "Estimated reverse-logistics cost (₹)",
-                min_value=0.0,
-                value=100.0,
-                step=25.0,
-                help="Merchant assumption used for prioritization; it is not a model input.",
-            )
+            with st.container(border=True):
+                reverse_logistics_cost = st.number_input(
+                    "Estimated reverse-logistics cost (₹)",
+                    min_value=0.0,
+                    value=100.0,
+                    step=25.0,
+                    help=(
+                        "Estimated shipping, handling and inspection cost for one returned "
+                        "order. It is used only for financial prioritization and never "
+                        "enters the model."
+                    ),
+                )
         with exposure_second:
-            value_loss_rate = st.slider(
-                "Estimated merchandise loss (%)",
-                min_value=0,
-                max_value=100,
-                value=25,
-                help="Estimated fraction of order value lost if the order is returned.",
-            )
+            with st.container(border=True):
+                value_loss_rate = st.slider(
+                    "Estimated merchandise loss (%)",
+                    min_value=0,
+                    max_value=100,
+                    value=25,
+                    help=(
+                        "Percentage of order value expected to be lost through damage, "
+                        "markdown or failed resale. It does not change the return-risk score."
+                    ),
+                )
+        st.markdown(
+            f'<div class="rr-exposure-formula"><b>Cost calculation:</b> Estimated return '
+            f"loss for each order = ₹{reverse_logistics_cost:,.0f} reverse-logistics cost + "
+            f"{value_loss_rate}% of its order value. These values affect only financial "
+            "exposure ranking.</div>",
+            unsafe_allow_html=True,
+        )
         sample = demo_batch_frame()
         demo_col, download_col = st.columns(2)
         run_demo = demo_col.button(
-            "Run 40-order demo batch",
+            "Run the 40-order reviewer demo",
             type="primary",
             use_container_width=True,
             help="Scores deterministic synthetic checkout orders for a reviewer walkthrough.",
         )
         download_col.download_button(
-            "Download demo/sample CSV",
+            "Download CSV template",
             sample.to_csv(index=False).encode("utf-8"),
             file_name="return_risk_batch_sample.csv",
             mime="text/csv",
             use_container_width=True,
         )
-        uploaded = st.file_uploader("Upload order CSV", type=["csv"])
+        uploaded = st.file_uploader(
+            "Upload merchant order CSV",
+            type=["csv"],
+            help="Up to 1,000 checkout-time order rows in the supplied CSV format.",
+        )
         if run_demo:
             uploaded_frame = sample
             st.caption(
@@ -1042,7 +1247,7 @@ with monitoring_tab:
                         scored,
                         column_config={
                             "risk_score": st.column_config.NumberColumn(
-                                "Risk score", format="%.1%%"
+                                "Risk score", format="percent"
                             ),
                             "estimated_return_loss": st.column_config.NumberColumn(
                                 "Estimated return loss", format="₹%.2f"
@@ -1084,7 +1289,7 @@ with monitoring_tab:
 
 
 with batch_tab:
-    st.subheader("Batch review")
+    st.subheader("Batch risk review")
     st.caption(
         "Score one built-in reviewer batch or upload up to 1,000 merchant orders. "
         "Every result remains monitoring-only."
@@ -1092,8 +1297,21 @@ with batch_tab:
     feature_hint(
         "blue",
         "03",
-        "Purpose of batch review",
+        "Purpose of batch risk review",
         "Prioritize many orders by expected return-loss exposure and inspect input drift.",
+    )
+    st.markdown(
+        """
+        <div class="rr-batch-guide">
+          <div class="rr-batch-step"><b>01 · SET COSTS</b>
+          Enter the merchant's estimated cost of a return.</div>
+          <div class="rr-batch-step"><b>02 · SCORE ORDERS</b>
+          Run the reviewer demo or upload the CSV template.</div>
+          <div class="rr-batch-step"><b>03 · REVIEW OUTPUT</b>
+          Inspect ranked exposure, input drift and the merchant report.</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
     render_batch_review()
 
@@ -1208,7 +1426,12 @@ with policy_tab:
     )
     curve["Review capacity used (%)"] = curve["flagged_rate"] * 100
     curve = curve.rename(columns={"savings_per_1000_orders": "Savings per 1,000 (₹)"})
-    st.markdown("#### Cost frontier")
+    st.markdown("#### Interactive validation cost frontier")
+    st.caption(
+        "Changes when you adjust the five Policy Lab assumptions above. The underlying "
+        "validation order rankings and confusion counts remain frozen; single-order, batch, "
+        "held-out test, and live monitoring data do not alter this curve."
+    )
     st.markdown(
         policy_frontier_chart(curve),
         unsafe_allow_html=True,
@@ -1236,7 +1459,7 @@ with policy_tab:
             "ROC-AUC": st.column_config.NumberColumn(format="%.3f"),
             "Average precision": st.column_config.NumberColumn(format="%.3f"),
             "Brier score": st.column_config.NumberColumn(format="%.3f"),
-            "Top-10% precision": st.column_config.NumberColumn(format="%.1%%"),
+            "Top-10% precision": st.column_config.NumberColumn(format="percent"),
         },
         hide_index=True,
         width="stretch",

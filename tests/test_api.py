@@ -78,11 +78,32 @@ def test_score_warns_when_valid_inputs_are_outside_reference_ranges(app):
     }
     response = request(app, "POST", "/v1/score", json=unusual)
     assert response.status_code == 200
-    warnings = response.json()["warnings"]
+    result = response.json()
+    warnings = result["warnings"]
     assert any("Product price" in warning for warning in warnings)
     assert any("Order quantity" in warning for warning in warnings)
     assert any("Discount" in warning for warning in warnings)
-    assert any("observed date range" in warning for warning in warnings)
+    assert any("model-development date range" in warning for warning in warnings)
+    assert result["recommended_action"].startswith("Abstain from review")
+    assert result["actual_action"] == "monitor_only"
+
+
+def test_elevated_order_is_a_simulated_human_review_candidate(app):
+    elevated = {
+        "product_category": "Clothing",
+        "product_price": 1200,
+        "order_quantity": 1,
+        "discount_applied": 50,
+        "shipping_method": "Standard",
+        "payment_method": "COD",
+        "order_date": "2024-12-01",
+    }
+    response = request(app, "POST", "/v1/score", json=elevated)
+    assert response.status_code == 200
+    result = response.json()
+    assert result["would_flag_under_frozen_policy"] is True
+    assert result["recommended_action"].startswith("Human-review candidate")
+    assert result["actual_action"] == "monitor_only"
 
 
 def test_model_card_discloses_negative_held_out_result(app):

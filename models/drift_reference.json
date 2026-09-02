@@ -210,6 +210,423 @@
     "high": 0.25
   },
   "threshold_note": "Illustrative PSI thresholds; calibrate with merchant history.",
+  "target_context": {
+    "orders": 3979,
+    "overall_return_rate": 0.290525,
+    "categorical": {
+      "Product_Category": {
+        "Books": {
+          "return_rate": 0.226073,
+          "orders": 606
+        },
+        "Clothing": {
+          "return_rate": 0.37305,
+          "orders": 1410
+        },
+        "Electronics": {
+          "return_rate": 0.256674,
+          "orders": 974
+        },
+        "Home Appliances": {
+          "return_rate": 0.264249,
+          "orders": 386
+        },
+        "Toys": {
+          "return_rate": 0.233831,
+          "orders": 603
+        }
+      },
+      "Shipping_Method": {
+        "Express": {
+          "return_rate": 0.287914,
+          "orders": 1299
+        },
+        "Next-Day": {
+          "return_rate": 0.285182,
+          "orders": 1343
+        },
+        "Standard": {
+          "return_rate": 0.298429,
+          "orders": 1337
+        }
+      },
+      "Payment_Method": {
+        "COD": {
+          "return_rate": 0.316284,
+          "orders": 958
+        },
+        "Credit Card": {
+          "return_rate": 0.30404,
+          "orders": 990
+        },
+        "Debit Card": {
+          "return_rate": 0.266667,
+          "orders": 990
+        },
+        "Wallet": {
+          "return_rate": 0.276657,
+          "orders": 1041
+        }
+      }
+    },
+    "temporal": {
+      "order_year": {
+        "2022": {
+          "return_rate": 0.264813,
+          "orders": 1367
+        },
+        "2023": {
+          "return_rate": 0.296437,
+          "orders": 1319
+        },
+        "2024": {
+          "return_rate": 0.311678,
+          "orders": 1293
+        }
+      },
+      "order_month": {
+        "1": {
+          "return_rate": 0.263456,
+          "orders": 353
+        },
+        "10": {
+          "return_rate": 0.323077,
+          "orders": 325
+        },
+        "11": {
+          "return_rate": 0.273585,
+          "orders": 318
+        },
+        "12": {
+          "return_rate": 0.271242,
+          "orders": 306
+        },
+        "2": {
+          "return_rate": 0.299703,
+          "orders": 337
+        },
+        "3": {
+          "return_rate": 0.293578,
+          "orders": 327
+        },
+        "4": {
+          "return_rate": 0.304217,
+          "orders": 332
+        },
+        "5": {
+          "return_rate": 0.303116,
+          "orders": 353
+        },
+        "6": {
+          "return_rate": 0.253776,
+          "orders": 331
+        },
+        "7": {
+          "return_rate": 0.320475,
+          "orders": 337
+        },
+        "8": {
+          "return_rate": 0.275362,
+          "orders": 345
+        },
+        "9": {
+          "return_rate": 0.304762,
+          "orders": 315
+        }
+      },
+      "order_day_of_week": {
+        "0": {
+          "return_rate": 0.268336,
+          "orders": 559
+        },
+        "1": {
+          "return_rate": 0.27911,
+          "orders": 584
+        },
+        "2": {
+          "return_rate": 0.285217,
+          "orders": 575
+        },
+        "3": {
+          "return_rate": 0.297762,
+          "orders": 581
+        },
+        "4": {
+          "return_rate": 0.278481,
+          "orders": 553
+        },
+        "5": {
+          "return_rate": 0.339655,
+          "orders": 580
+        },
+        "6": {
+          "return_rate": 0.283364,
+          "orders": 547
+        }
+      }
+    },
+    "numeric": {
+      "Product_Price": {
+        "interior_edges": [
+          300.882,
+          485.35,
+          680.8580000000001,
+          857.1160000000001,
+          1045.17,
+          1253.846,
+          1438.3860000000002,
+          1629.852,
+          1815.346
+        ],
+        "bins": [
+          {
+            "lower": 101.08,
+            "upper": 300.882,
+            "return_rate": 0.309045,
+            "orders": 398
+          },
+          {
+            "lower": 300.882,
+            "upper": 485.35,
+            "return_rate": 0.29397,
+            "orders": 398
+          },
+          {
+            "lower": 485.35,
+            "upper": 680.858,
+            "return_rate": 0.273869,
+            "orders": 398
+          },
+          {
+            "lower": 680.858,
+            "upper": 857.116,
+            "return_rate": 0.261307,
+            "orders": 398
+          },
+          {
+            "lower": 857.116,
+            "upper": 1045.17,
+            "return_rate": 0.287154,
+            "orders": 397
+          },
+          {
+            "lower": 1045.17,
+            "upper": 1253.846,
+            "return_rate": 0.298995,
+            "orders": 398
+          },
+          {
+            "lower": 1253.846,
+            "upper": 1438.386,
+            "return_rate": 0.326633,
+            "orders": 398
+          },
+          {
+            "lower": 1438.386,
+            "upper": 1629.852,
+            "return_rate": 0.296482,
+            "orders": 398
+          },
+          {
+            "lower": 1629.852,
+            "upper": 1815.346,
+            "return_rate": 0.248744,
+            "orders": 398
+          },
+          {
+            "lower": 1815.346,
+            "upper": 1999.8,
+            "return_rate": 0.309045,
+            "orders": 398
+          }
+        ]
+      },
+      "Order_Quantity": {
+        "interior_edges": [
+          2.0,
+          3.0,
+          4.0
+        ],
+        "bins": [
+          {
+            "lower": 1.0,
+            "upper": 2.0,
+            "return_rate": 0.284967,
+            "orders": 765
+          },
+          {
+            "lower": 2.0,
+            "upper": 3.0,
+            "return_rate": 0.30303,
+            "orders": 858
+          },
+          {
+            "lower": 3.0,
+            "upper": 4.0,
+            "return_rate": 0.298128,
+            "orders": 748
+          },
+          {
+            "lower": 4.0,
+            "upper": 5.0,
+            "return_rate": 0.28296,
+            "orders": 1608
+          }
+        ]
+      },
+      "Discount_Applied": {
+        "interior_edges": [
+          4.58,
+          9.802,
+          15.014000000000001,
+          19.714000000000002,
+          24.51,
+          29.177999999999997,
+          34.626000000000005,
+          39.892,
+          44.8
+        ],
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 4.58,
+            "return_rate": 0.219144,
+            "orders": 397
+          },
+          {
+            "lower": 4.58,
+            "upper": 9.802,
+            "return_rate": 0.258145,
+            "orders": 399
+          },
+          {
+            "lower": 9.802,
+            "upper": 15.014,
+            "return_rate": 0.271357,
+            "orders": 398
+          },
+          {
+            "lower": 15.014,
+            "upper": 19.714,
+            "return_rate": 0.263819,
+            "orders": 398
+          },
+          {
+            "lower": 19.714,
+            "upper": 24.51,
+            "return_rate": 0.262626,
+            "orders": 396
+          },
+          {
+            "lower": 24.51,
+            "upper": 29.178,
+            "return_rate": 0.258145,
+            "orders": 399
+          },
+          {
+            "lower": 29.178,
+            "upper": 34.626,
+            "return_rate": 0.344221,
+            "orders": 398
+          },
+          {
+            "lower": 34.626,
+            "upper": 39.892,
+            "return_rate": 0.366834,
+            "orders": 398
+          },
+          {
+            "lower": 39.892,
+            "upper": 44.8,
+            "return_rate": 0.34596,
+            "orders": 396
+          },
+          {
+            "lower": 44.8,
+            "upper": 50.0,
+            "return_rate": 0.315,
+            "orders": 400
+          }
+        ]
+      },
+      "Order_Value": {
+        "interior_edges": [
+          461.9674944,
+          790.0644208,
+          1093.1351760000002,
+          1431.0801318,
+          1856.088792,
+          2398.6308096,
+          2963.263617200001,
+          3841.802424,
+          5019.032164800001
+        ],
+        "bins": [
+          {
+            "lower": 61.97256,
+            "upper": 461.967494,
+            "return_rate": 0.321608,
+            "orders": 398
+          },
+          {
+            "lower": 461.967494,
+            "upper": 790.064421,
+            "return_rate": 0.30402,
+            "orders": 398
+          },
+          {
+            "lower": 790.064421,
+            "upper": 1093.135176,
+            "return_rate": 0.298995,
+            "orders": 398
+          },
+          {
+            "lower": 1093.135176,
+            "upper": 1431.080132,
+            "return_rate": 0.276382,
+            "orders": 398
+          },
+          {
+            "lower": 1431.080132,
+            "upper": 1856.088792,
+            "return_rate": 0.297229,
+            "orders": 397
+          },
+          {
+            "lower": 1856.088792,
+            "upper": 2398.63081,
+            "return_rate": 0.288945,
+            "orders": 398
+          },
+          {
+            "lower": 2398.63081,
+            "upper": 2963.263617,
+            "return_rate": 0.278894,
+            "orders": 398
+          },
+          {
+            "lower": 2963.263617,
+            "upper": 3841.802424,
+            "return_rate": 0.251256,
+            "orders": 398
+          },
+          {
+            "lower": 3841.802424,
+            "upper": 5019.032165,
+            "return_rate": 0.324121,
+            "orders": 398
+          },
+          {
+            "lower": 5019.032165,
+            "upper": 9827.0172,
+            "return_rate": 0.263819,
+            "orders": 398
+          }
+        ]
+      }
+    },
+    "interpretation": "Aggregate associations from training and validation only; they describe development data and do not establish causality."
+  },
   "source_partitions": [
     "chronological_train",
     "chronological_validation"

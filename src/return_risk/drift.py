@@ -57,6 +57,8 @@ def load_drift_reference(path: Path) -> dict:
     reference = json.loads(path.read_text(encoding="utf-8"))
     if reference.get("features") != MODEL_FEATURES:
         raise ValueError("Drift reference does not match the active feature allowlist.")
+    if "target_context" not in reference:
+        raise ValueError("Drift reference is missing development-only explanation context.")
     return reference
 
 

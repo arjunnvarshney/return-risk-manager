@@ -239,6 +239,21 @@ Then open `http://127.0.0.1:8501`. The application verifies the frozen model has
 startup. A score above 0.426 is reported only as “would flag under the frozen policy”; the
 actual action always remains `monitor_only`.
 
+Single-order results deliberately separate decision support from operational permission.
+An ordinary order displays **No review signal**, an in-range score above the frozen
+threshold displays **Human-review candidate (simulation only)**, and an out-of-range order
+displays **Abstain — reliability warning**. These labels help a reviewer understand the
+model response, while the separately displayed permitted action remains **Monitor only**
+for every order in this economically unsafe frozen release.
+
+The **Why this score?** panel combines local SHAP direction with aggregate return-rate
+context calculated only from the training and validation partitions. For example, it can
+show a category's development return rate beside the 29.1% development baseline and its
+sample size. Dates outside the 2022–2024 development period are described as time-drift
+extrapolation rather than evidence that a future year causes returns. These comparisons
+explain learned associations, not causal effects, and the held-out test contributes no
+explanation aggregates.
+
 ### Shadow outcomes and live metrics
 
 Every successful score is assigned an anonymous `prediction_id` and stored without the
@@ -253,9 +268,9 @@ live shadow metrics—not held-out test claims—and the number of actual custom
 interventions remains zero. `observed_return_cost` is optional, post-outcome reporting
 data and is never passed back into the frozen model.
 
-### Batch review and drift monitoring
+### Batch risk review and drift monitoring
 
-The dedicated **Batch review** tab can run a deterministic 40-order reviewer demonstration
+The dedicated **Batch risk review** tab can run a deterministic 40-order reviewer demonstration
 with one click or accept up to 1,000 merchant orders from CSV. The built-in batch is
 deliberately varied, so an elevated drift warning is expected and demonstrates the safety
 guardrail. Every row is validated and the required upload columns are:
@@ -281,7 +296,7 @@ The dashboard opens with a judge-oriented 60-second overview: the loss class, he
 evidence, false-positive count, operational decision, architecture flow, and recommended
 live walkthrough are visible in one place. The single-order detector also includes
 reproducible routine, elevated-risk, and reliability-warning presets so a live demo does
-not depend on typing inputs correctly under time pressure. Batch review is promoted to its
+not depend on typing inputs correctly under time pressure. Batch risk review is promoted to its
 own top-level tab rather than hidden inside outcome monitoring.
 
 A layered light visual system separates prediction, monitoring, policy, and evidence with

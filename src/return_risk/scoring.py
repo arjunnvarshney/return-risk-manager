@@ -16,7 +16,7 @@ from return_risk.config import (
 )
 from return_risk.data import model_input_frame
 from return_risk.drift import drift_report, load_drift_reference
-from return_risk.explainability import local_explanation
+from return_risk.explainability import contextual_reason, local_explanation
 from return_risk.release import (
     load_and_validate_operational_policy,
     load_and_validate_release,
@@ -29,8 +29,8 @@ from return_risk.schemas import (
     ScoreResponse,
 )
 
-OBSERVED_DATE_MIN = date(2022, 1, 1)
-OBSERVED_DATE_MAX = date(2025, 9, 3)
+DEVELOPMENT_DATE_MIN = date(2022, 1, 1)
+DEVELOPMENT_DATE_MAX = date(2024, 12, 14)
 BATCH_REQUIRED_COLUMNS = {
     "product_category",
     "product_price",
@@ -192,16 +192,38 @@ class FrozenReturnRiskScorer:
             probability,
             top_k=5,
         )
+        for reason in explanation["top_reasons"]:
+            reason["reason"] = contextual_reason(
+                reason["feature"],
+                frame.iloc[0][reason["feature"]],
+                reason["direction"],
+                self.drift_reference["target_context"],
+            )
         threshold = float(self.manifest["decision_threshold"])
         flagged = probability >= threshold
         warnings = self._input_range_warnings(frame)
-        if not OBSERVED_DATE_MIN <= order.order_date <= OBSERVED_DATE_MAX:
+        if not DEVELOPMENT_DATE_MIN <= order.order_date <= DEVELOPMENT_DATE_MAX:
             warnings.append(
-                "Order date is outside the dataset's observed date range; drift risk is elevated."
+                "Order date is outside the model-development date range; drift risk is elevated."
             )
+        has_reliability_warning = bool(warnings)
         warnings.append(
             "Held-out testing found negative estimated savings at the frozen threshold."
         )
+        if has_reliability_warning:
+            recommended_action = (
+                "Abstain from review because input reliability is uncertain; inspect the "
+                "order data and continue shadow monitoring."
+            )
+        elif flagged:
+            recommended_action = (
+                "Human-review candidate under the frozen threshold (simulation only); "
+                "the permitted operational action remains monitor only."
+            )
+        else:
+            recommended_action = (
+                "No review signal under the frozen threshold; continue shadow monitoring."
+            )
         return ScoreResponse(
             order_reference=order.order_reference,
             release_id=self.manifest["release_id"],
@@ -211,10 +233,7 @@ class FrozenReturnRiskScorer:
             deployment_mode="shadow",
             actual_action="monitor_only",
             risk_band="above_threshold" if flagged else "below_threshold",
-            recommended_action=(
-                "Record the score for shadow monitoring only; do not introduce customer "
-                "friction or operational intervention."
-            ),
+            recommended_action=recommended_action,
             computed_order_value=order.order_value,
             reasons=explanation["top_reasons"],
             warnings=warnings,
