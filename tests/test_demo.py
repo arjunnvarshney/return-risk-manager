@@ -5,6 +5,14 @@ from streamlit.testing.v1 import AppTest
 from return_risk.monitoring import ShadowMonitoringStore
 
 
+def test_dashboard_uses_violet_instead_of_orange_accents() -> None:
+    demo_path = Path(__file__).resolve().parents[1] / "demo" / "app.py"
+    source = demo_path.read_text(encoding="utf-8").lower()
+    assert "--violet:#7c5ce0" in source
+    for retired_accent in ("amber", "orange", "#e8a324", "#ffd47c", "#d89216"):
+        assert retired_accent not in source
+
+
 def test_streamlit_percentage_columns_use_supported_format() -> None:
     demo_path = Path(__file__).resolve().parents[1] / "demo" / "app.py"
     source = demo_path.read_text(encoding="utf-8")

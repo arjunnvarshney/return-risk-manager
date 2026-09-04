@@ -217,7 +217,7 @@ def merchant_risk_report_html(
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Merchant Return-Risk Report</title>
   <style>
-    :root{{--ink:#10213e;--muted:#64748b;--line:#dfe6f0;--blue:#245de1;--amber:#9a5b00}}
+    :root{{--ink:#10213e;--muted:#64748b;--line:#dfe6f0;--blue:#245de1;--violet:#513592}}
     *{{box-sizing:border-box}} body{{margin:0;background:#f5f7fb;color:var(--ink);
     font:14px/1.5 Inter,Segoe UI,Arial,sans-serif}} main{{max-width:1050px;margin:28px auto;
     padding:0 22px 40px}} header{{padding:28px 30px;border-radius:18px;color:white;
@@ -225,7 +225,7 @@ def merchant_risk_report_html(
     h2{{margin:28px 0 10px;font-size:19px}} h3{{margin:0 0 10px;font-size:15px}}
     .eyebrow{{color:#85efe0;font-size:11px;font-weight:700;letter-spacing:.1em}}
     .muted{{color:var(--muted)}} .notice{{margin:16px 0;padding:13px 15px;border:1px solid
-    #f1c578;border-radius:11px;background:#fff8e8;color:var(--amber)}} .grid{{display:grid;
+    #b9a6f3;border-radius:11px;background:#f3efff;color:var(--violet)}} .grid{{display:grid;
     grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}} .card,.panel{{padding:16px;
     border:1px solid var(--line);border-radius:12px;background:white}} .card span{{display:block;
     color:var(--muted);font-size:11px}} .card b{{display:block;margin-top:5px;font-size:22px}}

@@ -116,3 +116,5 @@ def test_merchant_report_is_complete_and_escapes_order_references() -> None:
     assert "₹255" in report
     assert "&lt;script&gt;alert(1)&lt;/script&gt;" in report
     assert "<script>alert(1)</script>" not in report
+    assert "--violet:#513592" in report
+    assert "amber" not in report.lower()

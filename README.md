@@ -4,6 +4,9 @@ A defense-only return-risk scoring prototype for Razorpay Buildathon Track 02.
 It estimates return probability from information available at checkout or
 pre-shipment, then maps the score to a bounded verification policy.
 
+Judge-facing resources: [submission brief](docs/SUBMISSION.md) and
+[2½-minute demo script](docs/DEMO_SCRIPT.md).
+
 ## Safety and evaluation commitments
 
 - Post-return fields are blocked from model input by code and tests.
@@ -300,7 +303,7 @@ not depend on typing inputs correctly under time pressure. Batch risk review is 
 own top-level tab rather than hidden inside outcome monitoring.
 
 A layered light visual system separates prediction, monitoring, policy, and evidence with
-blue, mint, amber, and slate accents. Each major feature includes a one-line purpose hint,
+blue, mint, violet, and slate accents. Each major feature includes a one-line purpose hint,
 while individual order fields use compact tooltips so non-technical reviewers can follow
 the workflow without turning the form into a wall of instructions.
 
